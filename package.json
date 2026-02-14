@@ -35,11 +35,11 @@
     "ai-ready",
     "llms-txt"
   ],
-  "author": "",
+  "author": "Somesh Ghosh <someshjoyguru@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/user/cipwe"
+    "url": "https://github.com/someshjoyguru/cipwe"
   },
   "homepage": "https://cipwe.com",
   "dependencies": {
