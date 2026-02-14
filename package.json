@@ -1,0 +1,57 @@
+{
+  "name": "cipwe",
+  "version": "0.1.0",
+  "description": "The Web Vitals for the AI Web — Audit & optimize your website for AI agents, LLMs, and answer engines.",
+  "type": "module",
+  "bin": {
+    "cipwe": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "aeo",
+    "seo",
+    "ai",
+    "llm",
+    "agents",
+    "crawlability",
+    "structured-data",
+    "json-ld",
+    "schema",
+    "answer-engine-optimization",
+    "cipwe",
+    "web-vitals",
+    "ai-ready",
+    "llms-txt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/cipwe"
+  },
+  "homepage": "https://cipwe.com",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

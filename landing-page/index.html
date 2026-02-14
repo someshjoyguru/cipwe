@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIPWE — The Web Vitals for the AI Web</title>
+    <meta name="description" content="Audit & optimize your website for AI agents, LLMs, and answer engines. The ESLint for AI-readability. Free, open-source CLI tool.">
+    <meta property="og:title" content="CIPWE — The Web Vitals for the AI Web">
+    <meta property="og:description" content="Audit & optimize your website for AI agents, LLMs, and answer engines. The ESLint for AI-readability.">
+    <meta property="og:image" content="https://cipwe.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cipwe.com">
+    <meta property="og:site_name" content="CIPWE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CIPWE — The Web Vitals for the AI Web">
+    <meta name="twitter:description" content="Audit & optimize your website for AI agents, LLMs, and answer engines.">
+    <meta name="twitter:image" content="https://cipwe.com/og-image.png">
+    <link rel="canonical" href="https://cipwe.com">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://cipwe.com/#website",
+          "url": "https://cipwe.com",
+          "name": "CIPWE",
+          "description": "The Web Vitals for the AI Web — Audit & optimize your website for AI agents, LLMs, and answer engines.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://cipwe.com/#software",
+          "name": "CIPWE",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "description": "CLI tool to audit websites for AI-readability. Measures how well AI agents can understand, crawl, and answer questions about your content.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "1"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://cipwe.com/#organization",
+          "name": "CIPWE",
+          "url": "https://cipwe.com",
+          "logo": "https://cipwe.com/logo.png",
+          "sameAs": [
+            "https://github.com/user/cipwe",
+            "https://www.npmjs.com/package/cipwe"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://cipwe.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is CIPWE?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIPWE is a CLI tool that audits websites for AI-readability. It measures how well AI agents (ChatGPT, Perplexity, Claude, Gemini) can understand, crawl, and answer questions about your content. Like Lighthouse for performance, CIPWE measures AI-readiness."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does CIPWE scoring work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIPWE uses a 100-point weighted scoring system across 6 categories: Structured Data (30 pts), Semantic HTML (20 pts), Metadata (15 pts), Crawl Signals (15 pts), Content Clarity (10 pts), and Agent Signals (10 pts). Each category contains multiple rules that check specific AI-readability factors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is CIPWE free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, CIPWE is completely free and open source under the MIT License. You can use it via npx without installation, or install it globally. No API keys or configuration required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is llms.txt?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "llms.txt is an emerging standard (like robots.txt but for AI) that tells AI agents what your site is about, what content is available, and how AI should use your content. CIPWE auto-generates this file with the fix command."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a28;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b8;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --accent-dark: #4f46e5;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a28 50%, #0a0a0f 100%);
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.8);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50px;
+            color: var(--accent-light);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent);
+        }
+
+        /* Terminal Demo */
+        .terminal-demo {
+            margin: 4rem auto 0;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .terminal {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-body {
+            padding: 2rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .terminal-line {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .prompt {
+            color: var(--accent-light);
+        }
+
+        .command {
+            color: var(--text-primary);
+        }
+
+        .output {
+            color: var(--text-secondary);
+            margin-left: 1rem;
+        }
+
+        .score-display {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 3px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        .score-line {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+        }
+
+        .score-bar {
+            display: inline-block;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 4px;
+            margin: 0 0.5rem;
+        }
+
+        /* Features Grid */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50px;
+            color: var(--accent-light);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Scoring System */
+        .scoring-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .category-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .category-name {
+            font-weight: 600;
+        }
+
+        .category-points {
+            color: var(--accent-light);
+            font-weight: 700;
+        }
+
+        .category-rules {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .category-rules li {
+            margin: 0.5rem 0;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+
+        .code-line {
+            line-height: 1.8;
+        }
+
+        .comment {
+            color: var(--text-secondary);
+        }
+
+        .keyword {
+            color: #c678dd;
+        }
+
+        .string {
+            color: #98c379;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+            border-radius: 24px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.125rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .terminal-body {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Utility */
+        .emoji {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">CIPWE</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#scoring">Scoring</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="https://github.com/user/cipwe" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <span class="emoji">🤖</span> The Web Vitals for the AI Web
+                </div>
+                <h1>Make Your Site<br>Answerable</h1>
+                <p class="subtitle">
+                    Audit & optimize your website for AI agents, LLMs, and answer engines. 
+                    The ESLint for AI-readability.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">
+                        npx cipwe audit your-site.com
+                    </a>
+                    <a href="https://github.com/user/cipwe" class="btn btn-secondary">
+                        <span class="emoji">⭐</span> Star on GitHub
+                    </a>
+                </div>
+
+                <!-- Terminal Demo -->
+                <div class="terminal-demo">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">npx cipwe audit https://example.com</span>
+                            </div>
+                            <div class="score-display">
+                                <div class="score-line">
+                                    <span><strong>CIPWE Score</strong></span>
+                                    <span><strong>72/100</strong> <span style="color: #818cf8;">(B)</span></span>
+                                </div>
+                                <div class="score-line" style="margin-top: 1rem;">
+                                    <span style="color: #a0a0b8;">Structured Data</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 60px;"></span>
+                                        <span style="color: #a0a0b8;">20/30</span>
+                                    </span>
+                                </div>
+                                <div class="score-line">
+                                    <span style="color: #a0a0b8;">Semantic HTML</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 70px;"></span>
+                                        <span style="color: #a0a0b8;">15/20</span>
+                                    </span>
+                                </div>
+                                <div class="score-line">
+                                    <span style="color: #a0a0b8;">Metadata</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 80px;"></span>
+                                        <span style="color: #a0a0b8;">15/15</span>
+                                    </span>
+                                </div>
+                                <div class="score-line">
+                                    <span style="color: #a0a0b8;">Crawl Signals</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 50px;"></span>
+                                        <span style="color: #a0a0b8;">10/15</span>
+                                    </span>
+                                </div>
+                                <div class="score-line">
+                                    <span style="color: #a0a0b8;">Content Clarity</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 60px;"></span>
+                                        <span style="color: #a0a0b8;">7/10</span>
+                                    </span>
+                                </div>
+                                <div class="score-line">
+                                    <span style="color: #a0a0b8;">Agent Signals</span>
+                                    <span>
+                                        <span class="score-bar" style="width: 40px;"></span>
+                                        <span style="color: #a0a0b8;">5/10</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">The Problem</div>
+                    <h2 class="section-title">The Web Is Shifting</h2>
+                    <p class="section-subtitle">
+                        Users don't click links anymore — they ask AI agents. If your site isn't AI-readable, you're invisible.
+                    </p>
+                </div>
+
+                <div class="stats">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">AI is the new search engine</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">ChatGPT</div>
+                            <div class="stat-label">Browses the web</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Perplexity</div>
+                            <div class="stat-label">Indexes websites</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Claude</div>
+                            <div class="stat-label">Reads pages</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Gemini</div>
+                            <div class="stat-label">Summarizes content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Features</div>
+                    <h2 class="section-title">Everything You Need</h2>
+                    <p class="section-subtitle">
+                        Built for developers. Designed for the AI web.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="feature-title">20 AI-Readiness Checks</h3>
+                        <p class="feature-description">
+                            JSON-LD, semantic HTML, metadata, crawl signals, content clarity, and AI agent directives — all scored out of 100.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Instant Fixes</h3>
+                        <p class="feature-description">
+                            Auto-generate llms.txt, JSON-LD, robots.txt, and sitemap.xml with one command. Copy-paste ready.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">Weighted Scoring</h3>
+                        <p class="feature-description">
+                            Not all rules are equal. CIPWE weighs structured data and agent signals higher than basic HTML.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Zero Config</h3>
+                        <p class="feature-description">
+                            Works with deployed sites or local builds. No setup, no API keys. Just npx and go.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3 class="feature-title">CI/CD Ready</h3>
+                        <p class="feature-description">
+                            JSON output mode for GitHub Actions. Fail builds if your CIPWE score drops below threshold.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Answer Engine Focused</h3>
+                        <p class="feature-description">
+                            Optimized for Perplexity, ChatGPT search, and AI overviews — not just traditional SEO.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scoring System -->
+        <section id="scoring" class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">The CIPWE Score</div>
+                    <h2 class="section-title">100 Points, 6 Categories</h2>
+                    <p class="section-subtitle">
+                        A weighted scoring system based on what actually matters for AI agents.
+                    </p>
+                </div>
+
+                <div class="scoring-grid">
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Structured Data</span>
+                            <span class="category-points">30 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ JSON-LD presence</li>
+                            <li>✓ Valid Schema.org types</li>
+                            <li>✓ FAQ schema</li>
+                            <li>✓ Article/Product schema</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Semantic HTML</span>
+                            <span class="category-points">20 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ Single H1 tag</li>
+                            <li>✓ Heading hierarchy</li>
+                            <li>✓ &lt;main&gt; element</li>
+                            <li>✓ &lt;article&gt;/&lt;section&gt;</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Metadata</span>
+                            <span class="category-points">15 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ Title tag (50-60 chars)</li>
+                            <li>✓ Meta description</li>
+                            <li>✓ OpenGraph tags</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Crawl Signals</span>
+                            <span class="category-points">15 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ robots.txt</li>
+                            <li>✓ sitemap.xml</li>
+                            <li>✓ Canonical URL</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Content Clarity</span>
+                            <span class="category-points">10 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ Content density (300+ words)</li>
+                            <li>✓ Lists & tables</li>
+                            <li>✓ Q&A structure</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <span class="category-name">Agent Signals</span>
+                            <span class="category-points">10 pts</span>
+                        </div>
+                        <ul class="category-rules">
+                            <li>✓ llms.txt file</li>
+                            <li>✓ Structured summary</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">How It Works</div>
+                    <h2 class="section-title">Three Simple Commands</h2>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-line"><span class="comment"># 1. Audit your site</span></div>
+                    <div class="code-line"><span class="keyword">npx</span> <span class="string">cipwe</span> audit https://your-site.com</div>
+                    <div class="code-line" style="margin-top: 1.5rem;"><span class="comment"># 2. Generate fixes</span></div>
+                    <div class="code-line"><span class="keyword">npx</span> <span class="string">cipwe</span> fix https://your-site.com</div>
+                    <div class="code-line" style="margin-top: 1.5rem;"><span class="comment"># 3. Quick score check</span></div>
+                    <div class="code-line"><span class="keyword">npx</span> <span class="string">cipwe</span> score https://your-site.com</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1rem;">
+                        No installation. No API keys. No config files.
+                    </p>
+                    <p style="color: var(--accent-light); font-weight: 600;">
+                        Just run it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-section">
+                    <h2>Ready to Dominate the AI Web?</h2>
+                    <p>Audit your site in 60 seconds. Open source. Free forever.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                            Get Started Now
+                        </a>
+                        <a href="https://github.com/user/cipwe" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/user/cipwe">GitHub</a>
+                <a href="https://www.npmjs.com/package/cipwe">npm</a>
+                <a href="#docs">Documentation</a>
+                <a href="https://twitter.com">Twitter</a>
+            </div>
+            <p>&copy; 2026 CIPWE. Open source under MIT License.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                The Web Vitals for the AI Web
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
