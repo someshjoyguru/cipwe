@@ -1,0 +1,858 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --bg-elev: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, 0.12);
+  --brand-a: #06b6d4;
+  --brand-b: #6366f1;
+  --success: #059669;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono, 'JetBrains Mono'), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  scroll-behavior: smooth;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+.bgMesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, #000 35%, transparent 100%);
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  width: min(1150px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.brandDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 99px;
+  background: linear-gradient(130deg, var(--brand-a), var(--brand-b));
+  box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.1);
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.topbar nav a:hover {
+  color: var(--text);
+}
+
+.navCta {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.52rem 0.85rem;
+  background: #ffffff;
+  font-weight: 600;
+}
+
+.hero {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.95fr;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--success);
+  font-weight: 700;
+  font-size: 0.74rem;
+}
+
+h1 {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-poppins), Poppins, sans-serif !important;
+  font-size: clamp(2rem, 5.4vw, 3.8rem);
+  line-height: 1.08;
+}
+
+h1 span {
+  background: linear-gradient(100deg, var(--brand-a), var(--brand-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead {
+  color: var(--muted);
+  line-height: 1.72;
+  max-width: 65ch;
+}
+
+.heroCommandCard {
+  margin-top: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 0.7rem;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.terminalChrome {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.35rem;
+  padding-bottom: 0.6rem;
+  color: var(--muted);
+}
+
+.terminalChrome span {
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+}
+
+.terminalChrome span:nth-child(1) {
+  background: #ff7e95;
+}
+
+.terminalChrome span:nth-child(2) {
+  background: #ffcf7a;
+}
+
+.terminalChrome span:nth-child(3) {
+  background: #82f7c8;
+}
+
+.terminalChrome small {
+  margin-left: 0.4rem;
+}
+
+.heroCtas {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost {
+  border-radius: 11px;
+  padding: 0.72rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+}
+
+.btnPrimary {
+  color: #031225;
+  background: linear-gradient(110deg, var(--brand-a), var(--brand-b));
+}
+
+.btnGhost {
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.scoreCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.scoreCard p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.scoreCircle {
+  margin: 1rem auto;
+  width: 150px;
+  aspect-ratio: 1;
+  border: 10px solid rgba(107, 228, 255, 0.3);
+  border-radius: 999px;
+  display: grid;
+  place-content: center;
+  box-shadow: inset 0 0 28px rgba(107, 228, 255, 0.3);
+}
+
+.scoreCircle strong {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.scoreCircle span {
+  color: var(--muted);
+  text-align: center;
+}
+
+.scoreCard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.scoreCard li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.16);
+  padding-bottom: 0.46rem;
+}
+
+.scoreCard li span {
+  color: var(--muted);
+}
+
+.featureGrid,
+.testimonialGrid,
+.faqGrid {
+  margin-top: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.glassCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.featureGrid h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.featureGrid p,
+.faqGrid p,
+.quoteCard span {
+  color: var(--muted);
+  line-height: 1.65;
+}
+.cleanHeroTitle {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+.terminalSection {
+  margin-top: 1.1rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 0.8rem;
+}
+
+.terminalSection pre {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  padding: 1rem;
+  overflow: auto;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  box-shadow: var(--shadow);
+}
+
+.terminalSection code,
+.commandButton {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+.quoteCard p {
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+.quoteCard strong {
+  display: block;
+}
+
+.commandButton {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.78rem;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.commandButton.large {
+  font-size: 0.96rem;
+  padding: 0.9rem;
+}
+
+.commandButton:hover {
+  transform: translateY(-1px);
+}
+
+.ctaBlock {
+  margin-top: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  background: linear-gradient(140deg, rgba(6, 182, 212, 0.08), rgba(99, 102, 241, 0.08));
+}
+
+.ctaBlock h3,
+.faqSection h3 {
+  margin-top: 0;
+}
+
+.commandStack {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.faqSection {
+  margin-top: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.cleanHome {
+  padding-top: 2.2rem;
+  padding-bottom: 2rem;
+}
+
+.cleanHero {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cleanHero h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cleanLead {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 58ch;
+}
+
+.cleanCommandCard {
+  margin-top: 1.5rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cleanCommand {
+  text-align: center;
+  font-size: 0.98rem;
+  background: #f8fafc;
+}
+
+.cleanHeroActions {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.cleanStrip {
+  margin-top: 3.2rem;
+  margin-bottom: 3.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.cleanStrip p {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(160deg, #ffffff 60%, rgba(6, 182, 212, 0.04));
+  text-align: center;
+  padding: 1.15rem 1rem;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.cleanStrip p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.cleanTerminal {
+  margin-top: 2.8rem;
+}
+
+.cleanTerminal h2 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.cleanTerminal pre {
+  margin: 0 auto;
+  max-width: 860px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  padding: 1rem;
+  overflow: auto;
+  box-shadow: var(--shadow);
+}
+
+.cleanSteps {
+  margin-top: 2.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.cleanSteps article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.cleanSteps span {
+  display: inline-grid;
+  place-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--brand-a);
+  font-weight: 700;
+}
+
+.cleanSteps h3 {
+  margin: 0.75rem 0 0.45rem;
+}
+
+.cleanSteps p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.cleanCta {
+  margin-top: 2.8rem;
+  text-align: center;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cleanCta .commandStack {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mediaShowcase {
+  margin-top: 1rem;
+}
+
+.mediaHeader {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+}
+
+.mediaHeader h2 {
+  margin-bottom: 0.45rem;
+}
+
+.mediaHeader p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.mediaCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.videoCard {
+  margin-bottom: 1rem;
+}
+
+.videoCard video {
+  width: 100%;
+  display: block;
+  background: #0b1020;
+}
+
+.mediaCaption {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.mediaCaption code {
+  background: rgba(6, 182, 212, 0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+  font-size: 0.92em;
+  color: var(--text);
+}
+
+.shotGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.shotCard {
+  margin: 0;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.shotCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+}
+
+.shotCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shotCard figcaption {
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.docsLayout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.docsSidebar {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.docsSidebarTitle {
+  margin-top: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.74rem;
+}
+
+.docsSidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docsSidebar a {
+  text-decoration: none;
+  color: var(--muted);
+  display: block;
+  border-radius: 8px;
+  padding: 0.45rem;
+}
+
+.docsSidebar a.active,
+.docsSidebar a:hover {
+  color: var(--text);
+  background: #f8fafc;
+}
+
+.docsContent h1 {
+  margin-bottom: 0.4rem;
+}
+
+.docsCards {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.docsIntroMeta {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.docsIntroMeta span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: #ffffff;
+}
+
+.docCard {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 0.8rem;
+  background: #ffffff;
+}
+
+.docCard h3 {
+  margin-top: 0;
+}
+
+.docCard p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.docSection + .docSection {
+  margin-top: 1.1rem;
+}
+
+.docSection h2 {
+  margin-bottom: 0.45rem;
+}
+
+.docSection p,
+.docSection li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.docSection ul {
+  padding-left: 1.1rem;
+}
+
+.docSection a {
+  color: #334155;
+  text-decoration-color: #cbd5e1;
+}
+
+.docSection a:hover {
+  color: #0f172a;
+}
+
+.docSection pre {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 0.75rem;
+  overflow: auto;
+}
+
+.docsGallery {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.docsShot {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.docsShot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.docsShot figcaption {
+  padding: 0.5rem 0.65rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.narrow {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.timelineItem {
+  border-left: 3px solid rgba(107, 228, 255, 0.5);
+  padding-left: 0.9rem;
+}
+
+.timelineItem p {
+  color: var(--muted);
+}
+
+.timelineItem h2 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.roadmapGrid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.roadmapCard {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: #ffffff;
+}
+
+.roadmapCard h2 {
+  margin-top: 0;
+}
+
+.roadmapCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.roadmapCard li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.notFound {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
+  padding-bottom: 1.6rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+@media (max-width: 1000px) {
+  .hero,
+  .terminalSection,
+  .docsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid,
+  .testimonialGrid,
+  .faqGrid,
+  .docsCards,
+  .roadmapGrid,
+  .cleanStrip,
+  .cleanSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .shotGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .docsGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .docsSidebar {
+    position: static;
+  }
+
+  .topbar nav {
+    display: none;
+  }
+
+  .navCta {
+    margin-left: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
