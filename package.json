@@ -1,6 +1,6 @@
 {
   "name": "cipwe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Web Vitals for the AI Web — Audit & optimize your website for AI agents, LLMs, and answer engines.",
   "type": "module",
   "bin": {
