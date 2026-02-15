@@ -87,7 +87,7 @@ export const docs: DocPage[] = [
     sections: [
       {
         heading: "audit",
-        body: "Runs a full AI-readiness analysis and outputs a score with detailed findings.",
+        body: "Analyzes your site for AI visibility and outputs a score with detailed findings.",
         code: "cipwe audit https://example.com\ncipwe audit .\ncipwe audit https://example.com --json"
       },
       {
@@ -224,7 +224,7 @@ export const docs: DocPage[] = [
   {
     slug: "ci-cd-integration",
     title: "CI/CD Integration",
-    description: "Gate merges with automated AI-readiness checks.",
+    description: "Gate merges with automated AI visibility checks.",
     sections: [
       {
         heading: "GitHub Actions",

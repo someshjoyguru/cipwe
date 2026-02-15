@@ -11,7 +11,7 @@
 
 ### The Web Vitals for the AI Web
 
-**Audit & optimize your website for AI agents, LLMs, and answer engines.**
+**Make your website visible and answerable to AI agents, LLMs, and answer engines.**
 
 [![npm version](https://img.shields.io/npm/v/cipwe.svg)](https://www.npmjs.com/package/cipwe)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)

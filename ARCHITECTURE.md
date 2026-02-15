@@ -14,7 +14,7 @@
 
 ## Overview
 
-CIPWE (The Web Vitals for the AI Web) is a CLI tool designed to audit and optimize websites for AI agent crawlability and readability. It functions as an "ESLint for AI-readability," evaluating websites across 20 distinct rules organized into 6 categories, with a maximum achievable score of 100 points.
+CIPWE (The Web Vitals for the AI Web) is a CLI tool designed to make websites visible and answerable to AI agents. It functions as an "ESLint for AI visibility," evaluating websites across 20 distinct rules organized into 6 categories, with a maximum achievable score of 100 points.
 
 ### Technology Stack
 - **Language**: TypeScript (ES Modules)
@@ -26,7 +26,7 @@ CIPWE (The Web Vitals for the AI Web) is a CLI tool designed to audit and optimi
 
 ### Key Features
 - **Dual Mode Operation**: Supports both remote URL crawling and local file system analysis
-- **Comprehensive Audit**: 20 rules across 6 categories evaluating AI-readiness
+- **Comprehensive Analysis**: 20 rules across 6 categories evaluating AI visibility
 - **Auto-Fix Generation**: Generates missing files (llms.txt, robots.txt, sitemap.xml, JSON-LD)
 - **Multiple Output Formats**: Human-readable terminal reports and JSON for CI/CD integration
 - **Robust Error Handling**: TLS fallback, retry mechanisms, and detailed error diagnostics

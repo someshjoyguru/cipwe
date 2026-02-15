@@ -49,7 +49,7 @@ export default function HomePage() {
       <SnapSection className="mediaShowcase" id="see-it" ariaLabel="terminal tutorial and screenshots">
         <div className="mediaHeader">
           <h2 className="eyebrow">See it in action</h2>
-          <p>Run one command, get a full AI-readiness breakdown in seconds.</p>
+          <p>Run one command, get a full visibility breakdown in seconds.</p>
         </div>
 
         <article className="mediaCard videoCard">
@@ -87,7 +87,7 @@ export default function HomePage() {
 
       <section className="ctaBlock cleanCta">
         <h3>Start now with npx</h3>
-        <p>Fastest way to audit your site for AI discoverability.</p>
+        <p>Fastest way to make your site visible in AI answers.</p>
         <div className="commandStack">
           <CommandCopy command={primaryCommand} className="commandButton cleanCommand" />
         </div>

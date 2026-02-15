@@ -1,10 +1,10 @@
 {
   "name": "cipwe",
   "version": "0.1.1",
-  "description": "The Web Vitals for the AI Web — Audit & optimize your website for AI agents, LLMs, and answer engines.",
+  "description": "The Web Vitals for the AI Web — Make your website visible in AI answers.",
   "type": "module",
   "bin": {
-    "cipwe": "./dist/index.js"
+    "cipwe": "dist/index.js"
   },
   "main": "./dist/index.js",
   "files": [
@@ -39,7 +39,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/someshjoyguru/cipwe"
+    "url": "git+https://github.com/someshjoyguru/cipwe.git"
   },
   "homepage": "https://cipwe.someshghosh.me",
   "dependencies": {

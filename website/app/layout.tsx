@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "CIPWE — AI Web Readiness CLI",
   description:
-    "Audit and optimize your website for AI agents, LLMs, and answer engines with a single npm command.",
+    "Make your website visible and answerable to AI agents with a single command.",
   metadataBase: new URL("https://cipwe.someshghosh.me")
 };
 

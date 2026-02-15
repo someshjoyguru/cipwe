@@ -21,12 +21,12 @@ const program = new Command();
 
 program
   .name('cipwe')
-  .description('The Web Vitals for the AI Web — Audit & optimize your website for AI agents, LLMs, and answer engines.')
+  .description('The Web Vitals for the AI Web — Make your website visible in AI answers.')
   .version('0.1.0');
 
 program
   .command('audit <target>')
-  .description('Audit a website or local project for AI crawlability')
+  .description('Analyze a website or local project for AI visibility')
   .option('--json', 'Output results as JSON (for CI/CD integration)')
   .option('--verbose', 'Show detailed analysis information')
   .option('-k, --insecure', 'Skip TLS certificate verification (useful for localhost / self-signed certs)')
@@ -43,7 +43,7 @@ Examples:
 
 program
   .command('fix <target>')
-  .description('Generate AI-readiness fixes (llms.txt, JSON-LD, robots.txt, sitemap.xml)')
+  .description('Generate visibility fixes (llms.txt, JSON-LD, robots.txt, sitemap.xml)')
   .option('-o, --output <dir>', 'Output directory for generated files', './cipwe-output')
   .option('-k, --insecure', 'Skip TLS certificate verification')
   .option('--timeout <ms>', 'Request timeout in milliseconds (default: 15000)', parseInt)

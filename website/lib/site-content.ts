@@ -19,7 +19,7 @@ export const features = [
   },
   {
     title: "CI ready",
-    description: "Use JSON output in pipelines and enforce a minimum AI-readiness threshold."
+    description: "Use JSON output in pipelines and enforce a minimum visibility threshold."
   },
   {
     title: "Built for modern teams",
@@ -46,7 +46,7 @@ export const testimonials = [
   },
   {
     quote:
-      "The fix command generated exactly what we needed to ship AI-readiness improvements quickly.",
+      "The fix command generated exactly what we needed to improve AI visibility quickly.",
     name: "Iris Monroe",
     role: "SEO Lead, Operaa"
   }
