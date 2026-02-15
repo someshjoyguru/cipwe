@@ -16,7 +16,7 @@
 [![npm version](https://img.shields.io/npm/v/cipwe.svg)](https://www.npmjs.com/package/cipwe)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-[Website](https://cipwe.com) · [Report Bug](https://github.com/user/cipwe/issues) · [Request Feature](https://github.com/user/cipwe/issues)
+[Website](https://cipwe.someshghosh.me) · [Report Bug](https://github.com/user/cipwe/issues) · [Request Feature](https://github.com/user/cipwe/issues)
 
 </div>
 
@@ -286,7 +286,7 @@ node dist/index.js audit https://example.com
 
 ## License
 
-MIT © [CIPWE](https://cipwe.com)
+MIT © [CIPWE](https://cipwe.someshghosh.me)
 
 ---
 
@@ -294,6 +294,6 @@ MIT © [CIPWE](https://cipwe.com)
 
 **Make your site answerable.**
 
-[cipwe.com](https://cipwe.com)
+[cipwe.someshghosh.me](https://cipwe.someshghosh.me)
 
 </div>

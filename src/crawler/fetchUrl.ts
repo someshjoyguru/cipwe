@@ -10,7 +10,7 @@ export interface FetchOptions {
 /** Shared state — set once if TLS fallback succeeds so subsequent requests don't fail */
 let tlsFallbackActive = false;
 
-const USER_AGENT = 'CIPWE-Bot/0.1 (+https://cipwe.com)';
+const USER_AGENT = 'CIPWE-Bot/0.1 (+https://cipwe.someshghosh.me)';
 
 const RETRY_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
 

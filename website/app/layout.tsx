@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "CIPWE — AI Web Readiness CLI",
   description:
     "Audit and optimize your website for AI agents, LLMs, and answer engines with a single npm command.",
-  metadataBase: new URL("https://cipwe.com")
+  metadataBase: new URL("https://cipwe.someshghosh.me")
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

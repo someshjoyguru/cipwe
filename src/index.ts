@@ -2,7 +2,7 @@
 
 // ============================================================
 // CIPWE — The Web Vitals for the AI Web
-// https://cipwe.com
+// https://cipwe.someshghosh.me
 //
 // Audit & optimize your website for AI agents, LLMs,
 // and answer engines.

@@ -1434,7 +1434,7 @@ jobs:
 - **Security**: Prevents redirect loops
 
 ### 3. User Agent
-- **Value**: `CIPWE-Bot/0.1 (+https://cipwe.com)`
+- **Value**: `CIPWE-Bot/0.1 (+https://cipwe.someshghosh.me)`
 - **Purpose**: Identifies traffic for server logs
 - **Compliance**: Follows robot.txt specifications
 

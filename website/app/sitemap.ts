@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { docs } from "@/lib/docs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cipwe.com";
+  const baseUrl = "https://cipwe.someshghosh.me";
 
   const staticPages: MetadataRoute.Sitemap = [
     "",

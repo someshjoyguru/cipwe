@@ -14,7 +14,7 @@ export function showBanner(): void {
 
   console.log(banner);
   console.log(chalk.dim('  The Web Vitals for the AI Web'));
-  console.log(chalk.dim('  https://cipwe.com'));
+  console.log(chalk.dim('  https://cipwe.someshghosh.me'));
   console.log();
 }
 
