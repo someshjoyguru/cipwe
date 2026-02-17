@@ -1,6 +1,6 @@
 {
   "name": "cipwe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The Web Vitals for the AI Web — Make your website visible in AI answers.",
   "type": "module",
   "bin": {
