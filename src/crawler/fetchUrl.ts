@@ -7,6 +7,26 @@ export interface FetchOptions {
   retries?: number;
 }
 
+/**
+ * Use native fetch (Node 18+) or fall back to node-fetch for Node 16.
+ */
+let _fetch: typeof globalThis.fetch | undefined;
+
+async function resolvedFetch(
+  input: string,
+  init?: RequestInit,
+): Promise<Response> {
+  if (!_fetch) {
+    if (typeof globalThis.fetch === 'function') {
+      _fetch = globalThis.fetch;
+    } else {
+      const mod = await import('node-fetch');
+      _fetch = mod.default as unknown as typeof globalThis.fetch;
+    }
+  }
+  return _fetch(input, init);
+}
+
 /** Shared state — set once if TLS fallback succeeds so subsequent requests don't fail */
 let tlsFallbackActive = false;
 
@@ -145,7 +165,7 @@ async function doFetch(
   }
 
   try {
-    return await fetch(url, {
+    return await resolvedFetch(url, {
       signal: controller.signal,
       redirect: 'follow',
       headers: {
