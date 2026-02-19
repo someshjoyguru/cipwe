@@ -13,7 +13,7 @@ interface FixOptions {
 }
 
 /**
- * The `cipwe fix` command — generate fixes for AI crawlability issues.
+ * The `cipwe fix` command - generate fixes for AI crawlability issues.
  */
 export async function fixCommand(target: string, options: FixOptions): Promise<void> {
   const outputDir = options.output || './cipwe-output';

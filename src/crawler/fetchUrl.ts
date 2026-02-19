@@ -27,7 +27,7 @@ async function resolvedFetch(
   return _fetch(input, init);
 }
 
-/** Shared state — set once if TLS fallback succeeds so subsequent requests don't fail */
+/** Shared state - set once if TLS fallback succeeds so subsequent requests don't fail */
 let tlsFallbackActive = false;
 
 const USER_AGENT = 'CIPWE-Bot/0.1 (+https://cipwe.someshghosh.me)';
@@ -117,7 +117,7 @@ function isTimeoutError(err: unknown): boolean {
  */
 function getRootMessage(err: unknown): string {
   const chain = unwrapError(err);
-  // Prefer the deepest cause — that's usually the real reason
+  // Prefer the deepest cause - that's usually the real reason
   for (let i = chain.length - 1; i >= 0; i--) {
     const msg = chain[i].message;
     if (msg && msg !== 'fetch failed') return msg;
@@ -224,7 +224,7 @@ export async function fetchUrl(
       // ── TLS error → auto-fallback ──────────────────────────────
       if (isTlsError(err) && !opts.insecure && !tlsFallbackActive) {
         process.stderr.write(
-          '\n  ⚠  TLS certificate error detected — retrying with verification disabled.\n' +
+          '\n  ⚠  TLS certificate error detected - retrying with verification disabled.\n' +
           '     (Use --insecure to skip this check upfront.)\n\n',
         );
         enableInsecureTls();
@@ -247,7 +247,7 @@ export async function fetchUrl(
   // Provide a human-friendly message depending on error type
   if (isConnectionRefused(lastError)) {
     throw new Error(
-      `Connection refused: ${url} — is the server running?`,
+      `Connection refused: ${url} - is the server running?`,
     );
   }
   if (isTimeoutError(lastError)) {
@@ -257,7 +257,7 @@ export async function fetchUrl(
   }
   if (isTlsError(lastError)) {
     throw new Error(
-      `TLS certificate error for ${url} — try: cipwe audit <url> --insecure`,
+      `TLS certificate error for ${url} - try: cipwe audit <url> --insecure`,
     );
   }
   if (lastError instanceof Error) {

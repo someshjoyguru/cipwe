@@ -40,7 +40,7 @@ export const faqSchemaRule: Rule = {
         passed: true,
         score: 6,
         maxScore: 6,
-        message: 'FAQPage schema detected — AI agents can parse Q&A content',
+        message: 'FAQPage schema detected - AI agents can parse Q&A content',
       };
     }
 

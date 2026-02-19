@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bg2)"/>
+
+  <!-- Title - value driven -->
+  <text x="640" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#0F172A">19 Checks AI Tools Actually Look For</text>
+  <text x="640" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="19" fill="#64748B">Each check tells you what's missing and exactly how to fix it</text>
+
+  <!-- Category cards - Row 1 -->
+  <!-- Structured Data -->
+  <g transform="translate(80, 145)">
+    <rect width="360" height="280" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#2563EB"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">📊 Can AI read your data?</text>
+    <rect x="260" y="30" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">30 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ JSON-LD markup detected</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Valid schema types used</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Article / Product schema</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ FAQ schema for Q&amp;A content</text>
+    <text x="24" y="168" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Question-answer structure</text>
+
+    <line x1="24" y1="190" x2="336" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="215" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="237" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">Without structured data, AI tools can't</text>
+    <text x="24" y="255" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">extract facts from your page to cite you.</text>
+  </g>
+
+  <!-- Semantic HTML -->
+  <g transform="translate(460, 145)">
+    <rect width="360" height="280" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#3B82F6"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">🏗️ Is your page well-structured?</text>
+    <rect x="268" y="30" width="68" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="302" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">20 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Single clear page title (H1)</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Logical heading hierarchy</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Lists &amp; tables for data</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Clear main content area</text>
+    <text x="24" y="168" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Article/section elements</text>
+
+    <line x1="24" y1="190" x2="336" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="215" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="237" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">AI understands well-organized pages better</text>
+    <text x="24" y="255" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">and extracts more accurate answers.</text>
+  </g>
+
+  <!-- Metadata -->
+  <g transform="translate(840, 145)">
+    <rect width="360" height="280" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#60A5FA"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">🏷️ Can AI discover you?</text>
+    <rect x="268" y="30" width="68" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="302" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">15 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Page has a title tag</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Meta description present</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Canonical URL set</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ OpenGraph / social tags</text>
+
+    <line x1="24" y1="178" x2="336" y2="178" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="203" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="225" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">Missing metadata means AI can't summarize</text>
+    <text x="24" y="243" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">or preview your page correctly.</text>
+  </g>
+
+  <!-- Category cards - Row 2 -->
+  <!-- Crawl Signals -->
+  <g transform="translate(80, 455)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#93C5FD"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">🕷️ Can AI crawlers find you?</text>
+    <rect x="268" y="30" width="68" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="302" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">15 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ robots.txt exists</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Sitemap available</text>
+
+    <line x1="24" y1="130" x2="336" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="177" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">AI crawlers need directions to find all your</text>
+    <text x="24" y="195" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">pages. No sitemap = invisible pages.</text>
+  </g>
+
+  <!-- Content Clarity -->
+  <g transform="translate(460, 455)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#BFDBFE"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">📝 Is your content AI-friendly?</text>
+    <rect x="268" y="30" width="68" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="302" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">10 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Enough content to summarize</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ Structured summary section</text>
+
+    <line x1="24" y1="130" x2="336" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="177" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">Thin or poorly structured content gets</text>
+    <text x="24" y="195" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">skipped by AI in favor of competitors.</text>
+  </g>
+
+  <!-- Agent Signals -->
+  <g transform="translate(840, 455)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#1E40AF"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="48" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">🤖 Ready for AI agents?</text>
+    <rect x="268" y="30" width="68" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="302" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">10 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12.5" fill="#374151">✓ llms.txt file for AI agents</text>
+
+    <line x1="24" y1="108" x2="336" y2="108" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="133" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Why it matters:</text>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">AI agents (like ChatGPT plugins) look for</text>
+    <text x="24" y="173" font-family="system-ui, sans-serif" font-size="11.5" fill="#6B7280">llms.txt to understand what your site offers.</text>
+  </g>
+</svg>

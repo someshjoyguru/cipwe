@@ -18,9 +18,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CIPWE — AI Web Readiness CLI",
+  title: "CIPWE - Can AI Find Your Website?",
   description:
-    "Make your website visible and answerable to AI agents with a single command.",
+    "ChatGPT, Perplexity & Google AI pull answers from websites. Check if yours shows up - one command, instant score, actionable fixes.",
   metadataBase: new URL("https://cipwe.someshghosh.me")
 };
 

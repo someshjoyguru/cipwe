@@ -40,7 +40,7 @@ export default function SnapSection({
           scheduleSnap();
         }
         if (!entry.isIntersecting) {
-          // Section left the viewport — reset so it can snap again next time
+          // Section left the viewport - reset so it can snap again next time
           hasSnapped.current = false;
           window.removeEventListener("scroll", scheduleSnap);
           if (timer.current) clearTimeout(timer.current);

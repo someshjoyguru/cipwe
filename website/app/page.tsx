@@ -11,15 +11,15 @@ export default function HomePage() {
   return (
     <main className="shell cleanHome">
       <section className="cleanHero" id="start-now">
-        <p className="eyebrow">The Web Vitals for the AI Web</p>
+        <p className="eyebrow">ChatGPT, Perplexity &amp; Google AI pull answers from websites</p>
         <h1 className="cleanHeroTitle">
-          One clear command<br />
-          to make your site visible<br />
-          in <span>AI answers</span>.
+          Is your site<br />
+          showing up in<br />
+          <span>AI answers</span>?
         </h1>
         <p className="lead cleanLead">
-          No setup maze. No heavy dashboard. Run once with npx, get an instant score, and ship
-          high-impact fixes.
+          One npx command to find out. Get an instant score and ship
+          the fixes that make AI tools cite your content.
         </p>
 
         <div className="heroCommandCard cleanCommandCard">
@@ -41,22 +41,22 @@ export default function HomePage() {
       </section>
 
       <section className="cleanStrip pt-10" aria-label="quick highlights">
-        <p>⚡ Runs instantly with npx</p>
-        <p>📊 Score + recommendations</p>
-        <p>🛠️ Fixes you can ship today</p>
+        <p>⚡ One command, instant results</p>
+        <p>📊 Score + what to fix</p>
+        <p>🛠️ AI cites you, not your competitor</p>
       </section>
 
       <SnapSection className="mediaShowcase" id="see-it" ariaLabel="terminal tutorial and screenshots">
         <div className="mediaHeader">
           <h2 className="eyebrow">See it in action</h2>
-          <p>Run one command, get a full visibility breakdown in seconds.</p>
+          <p>One command tells you exactly what AI tools can and can&apos;t find on your site.</p>
         </div>
 
         <article className="mediaCard videoCard">
           <video autoPlay loop muted playsInline preload="auto" poster="/img/analysis-screenshot-0.png">
             <source src="/cipwe-tutorial.mp4" type="video/mp4" />
           </video>
-          <p className="mediaCaption">Full audit from <code>npx cipwe</code> — score, category breakdown, and actionable fixes in one run</p>
+          <p className="mediaCaption">Full audit from <code>npx cipwe</code> - score, category breakdown, and actionable fixes in one run</p>
         </article>
       </SnapSection>
 
@@ -70,24 +70,24 @@ export default function HomePage() {
       <section className="cleanSteps" aria-label="how it works">
         <article>
           <span>1</span>
-          <h3>Copy npx command</h3>
-          <p>Run a full AI-readiness audit directly from your terminal.</p>
+          <h3>Run one command</h3>
+          <p>No install needed. npx runs a full scan from your terminal in seconds.</p>
         </article>
         <article>
           <span>2</span>
-          <h3>Review your score</h3>
-          <p>Get weighted category scoring with high-priority recommendations.</p>
+          <h3>See what AI can&apos;t find</h3>
+          <p>Get a score showing what ChatGPT, Perplexity &amp; others can read on your page.</p>
         </article>
         <article>
           <span>3</span>
-          <h3>Ship quick fixes</h3>
-          <p>Generate structured files and improve visibility for answer engines.</p>
+          <h3>Fix it &amp; get cited</h3>
+          <p>Ship the fixes so AI pulls answers from your site, not your competitor&apos;s.</p>
         </article>
       </section>
 
       <section className="ctaBlock cleanCta">
-        <h3>Start now with npx</h3>
-        <p>Fastest way to make your site visible in AI answers.</p>
+        <h3>Check your site now</h3>
+        <p>Find out in 10 seconds if AI tools can find and cite your content.</p>
         <div className="commandStack">
           <CommandCopy command={primaryCommand} className="commandButton cleanCommand" />
         </div>

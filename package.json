@@ -1,7 +1,7 @@
 {
   "name": "cipwe",
   "version": "0.1.2",
-  "description": "The Web Vitals for the AI Web — Make your website visible in AI answers.",
+  "description": "Can AI find your website? Check if ChatGPT, Perplexity & Google AI can cite your content.",
   "type": "module",
   "bin": {
     "cipwe": "dist/index.js"

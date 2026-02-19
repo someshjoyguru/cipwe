@@ -1,6 +1,6 @@
 // ============================================================
-// CIPWE — Types & Interfaces
-// The Web Vitals for the AI Web
+// CIPWE - Types & Interfaces
+// Can AI find your website?
 // ============================================================
 
 export type RuleCategory =

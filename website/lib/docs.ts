@@ -35,9 +35,9 @@ export const docs: DocPage[] = [
     sections: [
       {
         heading: "Who this is for",
-        body: "CIPWE is for teams that want to be discoverable and answerable by AI agents like ChatGPT, Gemini, Claude, and Perplexity.",
+        body: "CIPWE is for teams that want ChatGPT, Perplexity, Gemini, and Google AI to find, understand, and cite their content.",
         bullets: [
-          "Growth teams improving answer-engine visibility",
+          "Growth teams checking if AI tools can find their content",
           "Engineering teams building repeatable quality gates",
           "SEO/content teams validating machine-readable structure"
         ]

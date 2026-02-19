@@ -60,7 +60,7 @@ export const headingHierarchyRule: Rule = {
       passed: false,
       score,
       maxScore: 5,
-      message: `${violations} heading hierarchy violation(s) — levels are skipped`,
+      message: `${violations} heading hierarchy violation(s) - levels are skipped`,
       suggestion: 'Ensure headings follow a logical order: H1 → H2 → H3. Don\'t skip levels (e.g., H1 → H3). AI agents use this hierarchy to parse content structure',
     };
   },

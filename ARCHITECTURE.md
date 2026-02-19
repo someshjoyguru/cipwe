@@ -14,7 +14,7 @@
 
 ## Overview
 
-CIPWE (The Web Vitals for the AI Web) is a CLI tool designed to make websites visible and answerable to AI agents. It functions as an "ESLint for AI visibility," evaluating websites across 20 distinct rules organized into 6 categories, with a maximum achievable score of 100 points.
+CIPWE (Can AI Find Your Website?) is a CLI tool that checks whether ChatGPT, Perplexity & Google AI can find, understand, and cite your content. It functions as an "ESLint for AI visibility," evaluating websites across 20 distinct rules organized into 6 categories, with a maximum achievable score of 100 points.
 
 ### Technology Stack
 - **Language**: TypeScript (ES Modules)
@@ -471,7 +471,7 @@ check: (data) => {
 **has-qa-structure.ts** (4 points):
 - Identifies Q&A patterns (headings ending with "?")
 - Checks for answer content following questions
-- Optimizes for answer engines
+- Helps AI tools extract answers from Q&A patterns
 
 #### Agent Signal Rules
 
@@ -778,7 +778,7 @@ ui/
   ╚██████╗██║██║     ╚███╔███╔╝███████╗
    ╚═════╝╚═╝╚═╝      ╚══╝╚══╝ ╚══════╝
 
-  The Web Vitals for the AI Web
+  Can AI find your website?
 ```
 
 #### report.ts - Report Rendering
