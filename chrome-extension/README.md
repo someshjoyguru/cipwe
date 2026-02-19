@@ -1,6 +1,6 @@
 # CIPWE - Chrome Extension
 
-> **Can AI find your website?** Check if ChatGPT, Perplexity & Google AI can find, understand, and cite your content — one click, instant score, actionable fixes.
+> **Can AI find your website?** Check if ChatGPT, Perplexity & Google AI can find, understand, and cite your content - one click, instant score, actionable fixes.
 
 ![CIPWE Chrome Extension](icons/icon128.png)
 

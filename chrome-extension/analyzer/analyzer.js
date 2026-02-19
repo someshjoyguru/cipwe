@@ -459,7 +459,7 @@ function checkQaStructure(doc) {
   if (/\bQ:\s/i.test(text) || /\bA:\s/i.test(text)) qaSignals += 1;
 
   if (qaSignals >= 3) {
-    return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 4, maxScore: 4, message: 'Strong Q&A structure — AI tools can easily extract answers' };
+    return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 4, maxScore: 4, message: 'Strong Q&A structure - AI tools can easily extract answers' };
   }
   if (qaSignals >= 1) {
     return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 2, maxScore: 4, message: 'Some Q&A signals detected', suggestion: 'Strengthen Q&A structure with question-format headings' };

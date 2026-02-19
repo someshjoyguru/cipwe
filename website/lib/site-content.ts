@@ -15,7 +15,7 @@ export const features = [
   },
   {
     title: "Autofix engine",
-    description: "Generate the files AI tools need — llms.txt, JSON-LD, robots.txt, and sitemap.xml — instantly."
+    description: "Generate the files AI tools need - llms.txt, JSON-LD, robots.txt, and sitemap.xml - instantly."
   },
   {
     title: "CI ready",
@@ -67,7 +67,7 @@ export const faqs = [
   },
   {
     q: "What makes CIPWE different from standard SEO tools?",
-    a: "SEO tools optimize for search rankings. CIPWE checks whether ChatGPT, Perplexity, and Google AI can actually find, parse, and cite your content — a different problem entirely."
+    a: "SEO tools optimize for search rankings. CIPWE checks whether ChatGPT, Perplexity, and Google AI can actually find, parse, and cite your content - a different problem entirely."
   }
 ];
 

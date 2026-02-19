@@ -2,7 +2,7 @@
 
 ## LinkedIn Post (Professional & Detailed)
 
-🚀 Launching CIPWE — Can AI Find Your Website?
+🚀 Launching CIPWE - Can AI Find Your Website?
 
 After months of building, I'm excited to release CIPWE (pronounced "sip-we"), a command-line tool that makes your website visible in AI answers.
 
@@ -39,7 +39,7 @@ What are your biggest challenges with AI discoverability? Drop a comment - I'd l
 
 ## X/Twitter Post (280 characters max)
 
-🚀 Launched CIPWE — Can AI Find Your Website?
+🚀 Launched CIPWE - Can AI Find Your Website?
 
 One npx command to make your site visible in AI answers:
 
