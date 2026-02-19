@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560">
+  <defs>
+    <linearGradient id="marqGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="560" fill="url(#marqGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1300" cy="80" r="200" fill="rgba(255,255,255,0.02)"/>
+  <circle cx="1350" cy="450" r="250" fill="rgba(255,255,255,0.02)"/>
+  <circle cx="100" cy="500" r="150" fill="rgba(255,255,255,0.02)"/>
+
+  <!-- Left side content -->
+  <!-- Icon -->
+  <rect x="100" y="120" width="72" height="72" rx="18" fill="rgba(255,255,255,0.15)"/>
+  <text x="136" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="900" fill="white">C</text>
+
+  <text x="190" y="152" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="white">CIPWE</text>
+  <text x="190" y="182" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">AI Readiness Audit Extension</text>
+
+  <!-- Big tagline -->
+  <text x="100" y="270" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="white">Is your website ready for the</text>
+  <text x="100" y="315" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="white">age of AI?</text>
+
+  <text x="100" y="365" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)">One-click audit · 19 rules · 6 categories · 100-point score</text>
+  <text x="100" y="395" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)">Works with React, Next.js, Vue, Angular &amp; more</text>
+
+  <!-- Stats -->
+  <rect x="100" y="430" width="120" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="160" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">📊 19 Rules</text>
+
+  <rect x="240" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="315" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🏗️ 6 Categories</text>
+
+  <rect x="410" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="485" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🔒 100% Local</text>
+
+  <rect x="580" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
+  <text x="655" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">⚡ Open Source</text>
+
+  <!-- Right side: Mini extension mockup -->
+  <g transform="translate(870, 60)">
+    <rect x="-4" y="-4" width="448" height="448" rx="22" fill="rgba(0,0,0,0.15)"/>
+    <rect width="440" height="440" rx="18" fill="white"/>
+
+    <!-- Header -->
+    <rect width="440" height="110" rx="18" fill="#1D4ED8"/>
+    <rect y="18" width="440" height="92" fill="#1D4ED8"/>
+
+    <!-- Score ring -->
+    <circle cx="70" cy="58" r="35" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
+    <circle cx="70" cy="58" r="35" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-dasharray="176 44" transform="rotate(-90, 70, 58)"/>
+    <text x="70" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="white">85</text>
+
+    <rect x="130" y="35" width="44" height="24" rx="12" fill="rgba(255,255,255,0.2)"/>
+    <text x="152" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">A-</text>
+    <text x="130" y="78" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">85/100 · 14 passed</text>
+
+    <!-- Category bars -->
+    <g transform="translate(20, 125)">
+      <text x="0" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Structured Data</text>
+      <rect x="140" y="4" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="4" width="168" height="6" rx="3" fill="#3B82F6"/>
+      <text x="335" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">28/30</text>
+
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Semantic HTML</text>
+      <rect x="140" y="26" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="26" width="162" height="6" rx="3" fill="#3B82F6"/>
+      <text x="335" y="36" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">18/20</text>
+
+      <text x="0" y="58" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Metadata</text>
+      <rect x="140" y="48" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="48" width="120" height="6" rx="3" fill="#60A5FA"/>
+      <text x="335" y="58" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">10/15</text>
+
+      <text x="0" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Crawl Signals</text>
+      <rect x="140" y="70" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="70" width="144" height="6" rx="3" fill="#60A5FA"/>
+      <text x="335" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">12/15</text>
+
+      <text x="0" y="102" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Content Clarity</text>
+      <rect x="140" y="92" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="92" width="126" height="6" rx="3" fill="#F59E0B"/>
+      <text x="335" y="102" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">7/10</text>
+
+      <text x="0" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Agent Signals</text>
+      <rect x="140" y="114" width="180" height="6" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="114" width="162" height="6" rx="3" fill="#3B82F6"/>
+      <text x="335" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">9/10</text>
+    </g>
+
+    <!-- Rule cards -->
+    <g transform="translate(16, 270)">
+      <rect width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="22" cy="23" r="9" fill="#F0FDF4"/>
+      <text x="22" y="27" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">✓</text>
+      <text x="42" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">JSON-LD Presence</text>
+      <text x="42" y="36" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Valid JSON-LD found</text>
+      <rect x="340" y="10" width="48" height="20" rx="10" fill="#F0FDF4"/>
+      <text x="364" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">8/8</text>
+
+      <rect y="52" width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="22" cy="75" r="9" fill="#FEF2F2"/>
+      <text x="22" y="79" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EF4444">✗</text>
+      <text x="42" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">FAQ Schema</text>
+      <text x="42" y="88" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">No FAQPage schema found</text>
+      <rect x="340" y="62" width="48" height="20" rx="10" fill="#FEF2F2"/>
+      <text x="364" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EF4444">0/6</text>
+
+      <rect y="104" width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="22" cy="127" r="9" fill="#F0FDF4"/>
+      <text x="22" y="131" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">✓</text>
+      <text x="42" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">Single H1 Tag</text>
+      <text x="42" y="140" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Exactly one H1 tag found</text>
+      <rect x="340" y="114" width="48" height="20" rx="10" fill="#F0FDF4"/>
+      <text x="364" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">5/5</text>
+    </g>
+  </g>
+</svg>

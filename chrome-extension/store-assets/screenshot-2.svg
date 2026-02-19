@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="header2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bg2)"/>
+
+  <!-- Title text -->
+  <text x="640" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="800" fill="#0F172A">6 Categories · 19 Rules · Comprehensive AI Audit</text>
+  <text x="640" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#64748B">Analyze every aspect of your website's AI readiness</text>
+
+  <!-- Category cards - Row 1 -->
+  <!-- Structured Data -->
+  <g transform="translate(80, 160)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="6" rx="3" fill="#2563EB" transform="translate(0,0)"/>
+    <rect width="360" height="12" rx="6" fill="#2563EB" transform="translate(0,0)"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">📊</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Structured Data</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">30 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• JSON-LD Presence</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• JSON-LD Valid Type</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Article / Product Schema</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• FAQ Schema</text>
+    <text x="24" y="168" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Q&amp;A Structure</text>
+
+    <line x1="24" y1="190" x2="336" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="215" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">5 rules · Highest weight category</text>
+    <text x="24" y="237" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Ensures your content is machine-readable</text>
+  </g>
+
+  <!-- Semantic HTML -->
+  <g transform="translate(460, 160)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#3B82F6"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">🏗️</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Semantic HTML</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">20 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Single H1 Tag</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Heading Hierarchy</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has Lists &amp; Tables</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has Main Element</text>
+    <text x="24" y="168" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has Article Section</text>
+
+    <line x1="24" y1="190" x2="336" y2="190" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="215" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">5 rules · Page structure analysis</text>
+    <text x="24" y="237" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Validates proper HTML5 semantic structure</text>
+  </g>
+
+  <!-- Metadata -->
+  <g transform="translate(840, 160)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#60A5FA"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">🏷️</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Metadata</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">15 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has Title Tag</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Meta Description</text>
+    <text x="24" y="124" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Canonical URL</text>
+    <text x="24" y="146" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• OpenGraph Tags</text>
+
+    <line x1="24" y1="178" x2="336" y2="178" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="203" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">4 rules · Discoverability checks</text>
+    <text x="24" y="225" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Ensures pages are properly described</text>
+  </g>
+
+  <!-- Category cards - Row 2 -->
+  <!-- Crawl Signals -->
+  <g transform="translate(80, 450)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#93C5FD"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">🕷️</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Crawl Signals</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">15 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has robots.txt</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has Sitemap</text>
+
+    <line x1="24" y1="130" x2="336" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">2 rules · Crawler accessibility</text>
+    <text x="24" y="177" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Validates AI crawlers can find your pages</text>
+  </g>
+
+  <!-- Content Clarity -->
+  <g transform="translate(460, 450)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#BFDBFE"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">📝</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Content Clarity</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">10 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Content Length</text>
+    <text x="24" y="102" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Structured Summary</text>
+
+    <line x1="24" y1="130" x2="336" y2="130" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">2 rules · Readability analysis</text>
+    <text x="24" y="177" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Checks content quality for AI parsing</text>
+  </g>
+
+  <!-- Agent Signals -->
+  <g transform="translate(840, 450)">
+    <rect width="360" height="260" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="360" height="12" rx="6" fill="#1E40AF"/>
+    <rect x="16" width="328" height="6" fill="white" transform="translate(0,12)"/>
+    <text x="24" y="46" font-family="system-ui, sans-serif" font-size="24" fill="#0F172A">🤖</text>
+    <text x="56" y="46" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#0F172A">Agent Signals</text>
+    <rect x="260" y="28" width="76" height="26" rx="13" fill="#DBEAFE"/>
+    <text x="298" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1D4ED8">10 pts</text>
+
+    <text x="24" y="80" font-family="system-ui, sans-serif" font-size="12" fill="#6B7280">• Has llms.txt</text>
+
+    <line x1="24" y1="108" x2="336" y2="108" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="24" y="133" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">1 rule · AI agent friendliness</text>
+    <text x="24" y="155" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">Checks for emerging AI agent standards</text>
+  </g>
+</svg>

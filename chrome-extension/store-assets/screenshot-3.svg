@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="800" fill="url(#bg3)"/>
+
+  <!-- Title -->
+  <text x="640" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="800" fill="#0F172A">Works with Modern Frameworks</text>
+  <text x="640" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#64748B">Automatic framework detection · SPA-aware content analysis</text>
+
+  <!-- Framework grid -->
+  <!-- React -->
+  <g transform="translate(120, 170)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">⚛️</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">React</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Auto-detected · Waits</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">for hydration</text>
+  </g>
+
+  <!-- Next.js -->
+  <g transform="translate(390, 170)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">▲</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Next.js</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">SSR &amp; SSG support</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">__NEXT_DATA__ detected</text>
+  </g>
+
+  <!-- Vue -->
+  <g transform="translate(660, 170)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">🟩</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Vue</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Vue app detection</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">__vue_app__ support</text>
+  </g>
+
+  <!-- Angular -->
+  <g transform="translate(930, 170)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">🅰️</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Angular</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">ng-version detected</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Zone.js aware</text>
+  </g>
+
+  <!-- Nuxt -->
+  <g transform="translate(200, 320)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">💚</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Nuxt</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">__NUXT__ detection</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Universal rendering</text>
+  </g>
+
+  <!-- SvelteKit -->
+  <g transform="translate(470, 320)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">🔥</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">SvelteKit</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Svelte component</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">detection built-in</text>
+  </g>
+
+  <!-- Gatsby -->
+  <g transform="translate(740, 320)">
+    <rect width="240" height="120" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="55" font-family="system-ui, sans-serif" font-size="36">💜</text>
+    <text x="80" y="50" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Gatsby</text>
+    <text x="80" y="75" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">___gatsby detection</text>
+    <text x="80" y="95" font-family="system-ui, sans-serif" font-size="13" fill="#6B7280">Static site support</text>
+  </g>
+
+  <!-- Bottom: How it works -->
+  <g transform="translate(0, 490)">
+    <rect width="1280" height="310" fill="url(#heroGrad)"/>
+
+    <text x="640" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="white">How It Works</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(130, 80)">
+      <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)"/>
+      <text x="40" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="white">1</text>
+      <text x="100" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">Click the Extension Icon</text>
+      <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">Navigate to any website and click CIPWE</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="430" y="160" font-family="system-ui, sans-serif" font-size="24" fill="rgba(255,255,255,0.4)">→</text>
+
+    <!-- Step 2 -->
+    <g transform="translate(470, 80)">
+      <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)"/>
+      <text x="40" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="white">2</text>
+      <text x="100" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">Automatic Analysis</text>
+      <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">19 rules run against the live page</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="780" y="160" font-family="system-ui, sans-serif" font-size="24" fill="rgba(255,255,255,0.4)">→</text>
+
+    <!-- Step 3 -->
+    <g transform="translate(820, 80)">
+      <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.1)"/>
+      <text x="40" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="white">3</text>
+      <text x="100" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">Get Your Score</text>
+      <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">See score, grade, and actionable fixes</text>
+    </g>
+
+    <!-- Bottom tagline -->
+    <text x="640" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="rgba(255,255,255,0.5)">100% local analysis · No data sent anywhere · Open source</text>
+    <text x="640" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.4)">github.com/someshjoyguru/cipwe</text>
+  </g>
+</svg>
