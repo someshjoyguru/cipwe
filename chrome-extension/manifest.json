@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "CIPWE - AI Readiness Audit",
+  "name": "CIPWE - Can AI Find Your Website?",
   "version": "1.0.0",
-  "description": "The Web Vitals for the AI Web - Audit any website's AI readiness score in one click.",
+  "description": "ChatGPT, Perplexity & Google AI pull answers from websites. Check if yours shows up - one click, instant score, actionable fixes.",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "action": {

@@ -11,15 +11,15 @@ export const features = [
   },
   {
     title: "Actionable score",
-    description: "Get weighted scoring across 20 rules and clear priority recommendations."
+    description: "See exactly what AI tools check for across 19 rules, with clear priority fixes."
   },
   {
     title: "Autofix engine",
-    description: "Generate llms.txt, JSON-LD snippets, robots.txt, and sitemap.xml instantly."
+    description: "Generate the files AI tools need — llms.txt, JSON-LD, robots.txt, and sitemap.xml — instantly."
   },
   {
     title: "CI ready",
-    description: "Use JSON output in pipelines and enforce a minimum visibility threshold."
+    description: "Use JSON output in pipelines and block deploys that drop below your visibility threshold."
   },
   {
     title: "Built for modern teams",
@@ -67,7 +67,7 @@ export const faqs = [
   },
   {
     q: "What makes CIPWE different from standard SEO tools?",
-    a: "It focuses on AI agent readability, machine parsing, answer quality, and agent-specific signals such as llms.txt."
+    a: "SEO tools optimize for search rankings. CIPWE checks whether ChatGPT, Perplexity, and Google AI can actually find, parse, and cite your content — a different problem entirely."
   }
 ];
 
@@ -120,7 +120,7 @@ export const changelog = [
   {
     date: "2026-01-15",
     title: "v0.7.0 - Alpha release and community preview",
-    description: "First public alpha release with core audit engine. Introduced npx zero-install workflow. Implemented 15 foundational rules focused on AI-readiness fundamentals. Gathered initial feedback from early adopters."
+    description: "First public alpha release with core audit engine. Introduced npx zero-install workflow. Implemented 15 foundational rules checking what AI tools look for. Gathered initial feedback from early adopters."
   }
 ];
 

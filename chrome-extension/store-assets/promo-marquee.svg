@@ -13,110 +13,110 @@
   <circle cx="1350" cy="450" r="250" fill="rgba(255,255,255,0.02)"/>
   <circle cx="100" cy="500" r="150" fill="rgba(255,255,255,0.02)"/>
 
-  <!-- Left side content -->
+  <!-- Left side: Value-driven content -->
   <!-- Icon -->
-  <rect x="100" y="120" width="72" height="72" rx="18" fill="rgba(255,255,255,0.15)"/>
-  <text x="136" y="168" text-anchor="middle" font-family="system-ui, sans-serif" font-size="38" font-weight="900" fill="white">C</text>
+  <rect x="100" y="90" width="68" height="68" rx="17" fill="rgba(255,255,255,0.15)"/>
+  <text x="134" y="136" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="900" fill="white">C</text>
 
-  <text x="190" y="152" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="white">CIPWE</text>
-  <text x="190" y="182" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">AI Readiness Audit Extension</text>
+  <text x="186" y="122" font-family="system-ui, sans-serif" font-size="38" font-weight="800" fill="white">CIPWE</text>
 
-  <!-- Big tagline -->
-  <text x="100" y="270" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="white">Is your website ready for the</text>
-  <text x="100" y="315" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="white">age of AI?</text>
+  <!-- Big value prop -->
+  <text x="100" y="220" font-family="system-ui, sans-serif" font-size="40" font-weight="800" fill="white">ChatGPT &amp; Perplexity pull</text>
+  <text x="100" y="270" font-family="system-ui, sans-serif" font-size="40" font-weight="800" fill="white">answers from websites.</text>
+  <text x="100" y="330" font-family="system-ui, sans-serif" font-size="32" font-weight="600" fill="rgba(255,255,255,0.8)">Is yours showing up?</text>
 
-  <text x="100" y="365" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)">One-click audit · 19 rules · 6 categories · 100-point score</text>
-  <text x="100" y="395" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.6)">Works with React, Next.js, Vue, Angular &amp; more</text>
+  <text x="100" y="390" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.55)">One-click scan tells you exactly what to fix so AI tools</text>
+  <text x="100" y="418" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.55)">can find, understand, and cite your content.</text>
 
   <!-- Stats -->
-  <rect x="100" y="430" width="120" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
-  <text x="160" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">📊 19 Rules</text>
+  <rect x="100" y="455" width="130" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="165" y="481" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">⚡ One Click</text>
 
-  <rect x="240" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
-  <text x="315" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🏗️ 6 Categories</text>
+  <rect x="245" y="455" width="150" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="320" y="481" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">📋 19 Checks</text>
 
-  <rect x="410" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
-  <text x="485" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🔒 100% Local</text>
+  <rect x="410" y="455" width="150" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="485" y="481" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🔒 100% Private</text>
 
-  <rect x="580" y="430" width="150" height="40" rx="20" fill="rgba(255,255,255,0.12)"/>
-  <text x="655" y="456" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">⚡ Open Source</text>
+  <rect x="575" y="455" width="130" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="640" y="481" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">🆓 Free &amp; OSS</text>
 
   <!-- Right side: Mini extension mockup -->
-  <g transform="translate(870, 60)">
-    <rect x="-4" y="-4" width="448" height="448" rx="22" fill="rgba(0,0,0,0.15)"/>
-    <rect width="440" height="440" rx="18" fill="white"/>
+  <g transform="translate(870, 40)">
+    <rect x="-4" y="-4" width="448" height="488" rx="22" fill="rgba(0,0,0,0.15)"/>
+    <rect width="440" height="480" rx="18" fill="white"/>
 
     <!-- Header -->
-    <rect width="440" height="110" rx="18" fill="#1D4ED8"/>
-    <rect y="18" width="440" height="92" fill="#1D4ED8"/>
+    <rect width="440" height="105" rx="18" fill="#1D4ED8"/>
+    <rect y="18" width="440" height="87" fill="#1D4ED8"/>
 
     <!-- Score ring -->
-    <circle cx="70" cy="58" r="35" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6"/>
-    <circle cx="70" cy="58" r="35" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-dasharray="176 44" transform="rotate(-90, 70, 58)"/>
-    <text x="70" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="white">85</text>
+    <circle cx="65" cy="55" r="32" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="5"/>
+    <circle cx="65" cy="55" r="32" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-dasharray="161 40" transform="rotate(-90, 65, 55)"/>
+    <text x="65" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="white">85</text>
 
-    <rect x="130" y="35" width="44" height="24" rx="12" fill="rgba(255,255,255,0.2)"/>
-    <text x="152" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">A-</text>
-    <text x="130" y="78" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">85/100 · 14 passed</text>
+    <rect x="120" y="35" width="42" height="22" rx="11" fill="rgba(255,255,255,0.2)"/>
+    <text x="141" y="51" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="white">A-</text>
+    <text x="120" y="74" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">14 passed · 5 to fix</text>
 
-    <!-- Category bars -->
-    <g transform="translate(20, 125)">
+    <!-- Category bars with human labels -->
+    <g transform="translate(20, 120)">
       <text x="0" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Structured Data</text>
-      <rect x="140" y="4" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="4" width="168" height="6" rx="3" fill="#3B82F6"/>
-      <text x="335" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">28/30</text>
+      <rect x="130" y="5" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="5" width="186" height="5" rx="2.5" fill="#3B82F6"/>
+      <text x="345" y="14" font-family="system-ui, sans-serif" font-size="11" fill="#22C55E" font-weight="600">Great</text>
 
-      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Semantic HTML</text>
-      <rect x="140" y="26" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="26" width="162" height="6" rx="3" fill="#3B82F6"/>
-      <text x="335" y="36" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">18/20</text>
+      <text x="0" y="34" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Page Structure</text>
+      <rect x="130" y="25" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="25" width="180" height="5" rx="2.5" fill="#3B82F6"/>
+      <text x="345" y="34" font-family="system-ui, sans-serif" font-size="11" fill="#22C55E" font-weight="600">Great</text>
 
-      <text x="0" y="58" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Metadata</text>
-      <rect x="140" y="48" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="48" width="120" height="6" rx="3" fill="#60A5FA"/>
-      <text x="335" y="58" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">10/15</text>
+      <text x="0" y="54" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Discoverability</text>
+      <rect x="130" y="45" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="45" width="134" height="5" rx="2.5" fill="#F59E0B"/>
+      <text x="345" y="54" font-family="system-ui, sans-serif" font-size="11" fill="#F59E0B" font-weight="600">Fix it</text>
 
-      <text x="0" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Crawl Signals</text>
-      <rect x="140" y="70" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="70" width="144" height="6" rx="3" fill="#60A5FA"/>
-      <text x="335" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">12/15</text>
+      <text x="0" y="74" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Crawlability</text>
+      <rect x="130" y="65" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="65" width="160" height="5" rx="2.5" fill="#60A5FA"/>
+      <text x="345" y="74" font-family="system-ui, sans-serif" font-size="11" fill="#60A5FA" font-weight="600">Good</text>
 
-      <text x="0" y="102" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Content Clarity</text>
-      <rect x="140" y="92" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="92" width="126" height="6" rx="3" fill="#F59E0B"/>
-      <text x="335" y="102" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">7/10</text>
+      <text x="0" y="94" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Content Quality</text>
+      <rect x="130" y="85" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="85" width="140" height="5" rx="2.5" fill="#F59E0B"/>
+      <text x="345" y="94" font-family="system-ui, sans-serif" font-size="11" fill="#F59E0B" font-weight="600">Fix it</text>
 
-      <text x="0" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">Agent Signals</text>
-      <rect x="140" y="114" width="180" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="140" y="114" width="162" height="6" rx="3" fill="#3B82F6"/>
-      <text x="335" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">9/10</text>
+      <text x="0" y="114" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#374151">AI Agent Support</text>
+      <rect x="130" y="105" width="200" height="5" rx="2.5" fill="#E5E7EB"/>
+      <rect x="130" y="105" width="180" height="5" rx="2.5" fill="#3B82F6"/>
+      <text x="345" y="114" font-family="system-ui, sans-serif" font-size="11" fill="#22C55E" font-weight="600">Great</text>
     </g>
 
     <!-- Rule cards -->
-    <g transform="translate(16, 270)">
-      <rect width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-      <circle cx="22" cy="23" r="9" fill="#F0FDF4"/>
-      <text x="22" y="27" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">✓</text>
-      <text x="42" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">JSON-LD Presence</text>
-      <text x="42" y="36" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Valid JSON-LD found</text>
-      <rect x="340" y="10" width="48" height="20" rx="10" fill="#F0FDF4"/>
-      <text x="364" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">8/8</text>
+    <g transform="translate(16, 260)">
+      <rect width="408" height="42" rx="7" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="20" cy="21" r="8" fill="#F0FDF4"/>
+      <text x="20" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#22C55E">✓</text>
+      <text x="38" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">JSON-LD found</text>
+      <text x="38" y="33" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">AI can read your structured data</text>
 
-      <rect y="52" width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-      <circle cx="22" cy="75" r="9" fill="#FEF2F2"/>
-      <text x="22" y="79" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EF4444">✗</text>
-      <text x="42" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">FAQ Schema</text>
-      <text x="42" y="88" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">No FAQPage schema found</text>
-      <rect x="340" y="62" width="48" height="20" rx="10" fill="#FEF2F2"/>
-      <text x="364" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#EF4444">0/6</text>
+      <rect y="48" width="408" height="42" rx="7" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="20" cy="69" r="8" fill="#FEF2F2"/>
+      <text x="20" y="73" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#EF4444">!</text>
+      <text x="38" y="66" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">Add FAQ Schema</text>
+      <text x="38" y="81" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Help AI extract Q&amp;A from your page</text>
 
-      <rect y="104" width="408" height="46" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-      <circle cx="22" cy="127" r="9" fill="#F0FDF4"/>
-      <text x="22" y="131" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">✓</text>
-      <text x="42" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">Single H1 Tag</text>
-      <text x="42" y="140" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">Exactly one H1 tag found</text>
-      <rect x="340" y="114" width="48" height="20" rx="10" fill="#F0FDF4"/>
-      <text x="364" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#22C55E">5/5</text>
+      <rect y="96" width="408" height="42" rx="7" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="20" cy="117" r="8" fill="#F0FDF4"/>
+      <text x="20" y="121" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#22C55E">✓</text>
+      <text x="38" y="114" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">Good heading structure</text>
+      <text x="38" y="129" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">AI can parse your content hierarchy</text>
+
+      <rect y="144" width="408" height="42" rx="7" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <circle cx="20" cy="165" r="8" fill="#FFFBEB"/>
+      <text x="20" y="169" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#F59E0B">!</text>
+      <text x="38" y="162" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1F2937">Missing og:image</text>
+      <text x="38" y="177" font-family="system-ui, sans-serif" font-size="10" fill="#6B7280">AI previews won't show a thumbnail</text>
     </g>
   </g>
 </svg>

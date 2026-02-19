@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Download Chrome Extension - CIPWE",
+  title: "Chrome Extension - CIPWE",
   description:
-    "Download the CIPWE Chrome Extension to audit any website's AI readiness score in one click. Free, no Chrome Web Store needed.",
+    "Can AI find your website? One-click Chrome extension to check if ChatGPT, Perplexity & Google AI can cite your content. Free & open source.",
 };
 
 const steps = [
@@ -55,12 +55,12 @@ export default function ExtensionPage() {
       <section className="extHero">
         <div className="extBadge">Chrome Extension</div>
         <h1 className="extTitle">
-          Audit AI readiness<br />
-          in <span>one click</span>.
+          Can AI find<br />
+          <span>your website</span>?
         </h1>
         <p className="lead extLead">
-          The same 19-rule CIPWE analysis, right in your browser toolbar.
-          No terminal needed - click, scan, fix.
+          One click to check if ChatGPT, Perplexity &amp; Google AI
+          can find and cite your content. No terminal needed.
         </p>
 
         <a
@@ -162,7 +162,7 @@ export default function ExtensionPage() {
       <section className="extFeatures">
         <h2 className="extSectionTitle">What it checks</h2>
         <p className="extSectionSub">
-          19 rules across 6 categories - the same engine as the CLI, scoring up to 100 points.
+          19 things AI tools actually look for - from structured data to crawlability, scored out of 100.
         </p>
         <div className="extCatGrid">
           {categories.map((c) => (
@@ -177,8 +177,8 @@ export default function ExtensionPage() {
 
       {/* CTA */}
       <section className="extCta">
-        <h3>Ready to audit?</h3>
-        <p>Download the extension and check any site in seconds.</p>
+        <h3>Check any site in seconds</h3>
+        <p>Find out if AI tools can find and cite your content.</p>
         <a
           href="/cipwe-chrome-extension.zip"
           download="cipwe-chrome-extension.zip"

@@ -9,9 +9,9 @@
    ╚═════╝╚═╝╚═╝      ╚══╝╚══╝ ╚══════╝
 ```
 
-### The Web Vitals for the AI Web
+### Can AI Find Your Website?
 
-**Make your website visible and answerable to AI agents, LLMs, and answer engines.**
+**ChatGPT, Perplexity & Google AI pull answers from websites. CIPWE checks if yours shows up.**
 
 [![npm version](https://img.shields.io/npm/v/cipwe.svg)](https://www.npmjs.com/package/cipwe)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -24,9 +24,9 @@
 
 ## What is CIPWE?
 
-**CIPWE** is the **ESLint for AI-readability**. It scans your website and tells you how well AI agents (ChatGPT, Perplexity, Claude, Gemini) can understand, crawl, and answer questions about your content.
+**CIPWE** checks if AI tools can find, understand, and cite your website. It scans your page and tells you exactly what ChatGPT, Perplexity, Claude, and Google AI can (and can't) read.
 
-Just like **Lighthouse** measures web performance and **Web Vitals** measure user experience - **CIPWE** measures **AI-readiness**.
+Think of it like **Lighthouse** for AI visibility. One command, instant score, actionable fixes.
 
 ```bash
 npx cipwe audit https://your-site.com
@@ -46,16 +46,16 @@ npx cipwe audit https://your-site.com
 
 ## Why CIPWE?
 
-The web is shifting. AI agents are the new search engines:
+AI tools are the new front page of the internet:
 
 - **ChatGPT** browses the web to answer questions
 - **Perplexity** indexes websites for instant answers
 - **Claude** reads pages for research and analysis
-- **Gemini** summarizes web content in search results
+- **Google AI Overview** summarizes web content in search results
 
-If your site isn't **AI-readable**, you're invisible to the next generation of search.
+If your site isn't set up right, AI skips you and cites your competitors instead.
 
-**CIPWE helps you fix that in 60 seconds.**
+**CIPWE tells you what to fix in 60 seconds.**
 
 ## Quick Start
 
@@ -91,16 +91,16 @@ npm install --save-dev cipwe
 
 ## The CIPWE Score
 
-CIPWE evaluates your site across **6 categories** with **20 rules**, totaling **100 points**:
+CIPWE checks **19 things AI tools actually look for** across **6 categories**, scoring up to **100 points**:
 
-| Category | Weight | What It Measures |
+| Category | Weight | What AI Tools Check |
 |----------|--------|-----------------|
-| **Structured Data** | 30 pts | JSON-LD, Schema.org types, FAQ/Article schemas |
-| **Semantic HTML** | 20 pts | H1 tags, heading hierarchy, `<main>`, `<article>` |
-| **Metadata** | 15 pts | Title, meta description, OpenGraph tags |
-| **Crawl Signals** | 15 pts | robots.txt, sitemap.xml, canonical URLs |
-| **Content Clarity** | 10 pts | Content density, lists/tables, Q&A structure |
-| **Agent Signals** | 10 pts | llms.txt, machine-readable summaries |
+| **Structured Data** | 30 pts | Can AI read your data? JSON-LD, Schema.org, FAQ schemas |
+| **Semantic HTML** | 20 pts | Is your page well-structured? H1, headings, `<main>`, `<article>` |
+| **Metadata** | 15 pts | Can AI discover you? Title, description, OpenGraph |
+| **Crawl Signals** | 15 pts | Can AI crawlers find you? robots.txt, sitemap, canonical |
+| **Content Clarity** | 10 pts | Is your content AI-friendly? Length, lists, Q&A |
+| **Agent Signals** | 10 pts | Ready for AI agents? llms.txt, summaries |
 
 ### Grading Scale
 
@@ -261,14 +261,14 @@ CIPWE auto-generates this for you with the `fix` command.
 
 ## Philosophy
 
-> SEO optimized for Google.  
-> CIPWE optimizes for the AI web.
+> SEO made your site findable on Google.  
+> CIPWE makes your site findable by AI.
 
-The web is becoming **answer-first**. Users don't click links - they ask AI agents. Your content needs to be:
+The web is shifting. People don't just click links anymore - they ask ChatGPT, Perplexity, and Google AI. Your content needs to be:
 
-1. **Findable** - AI agents can discover it
-2. **Parseable** - Structured for machine reading
-3. **Answerable** - Clear enough to generate accurate answers
+1. **Findable** - AI crawlers can discover it
+2. **Parseable** - Structured so AI can extract facts
+3. **Citable** - Clear enough that AI quotes you, not your competitor
 
 CIPWE measures all three.
 
@@ -292,7 +292,7 @@ MIT © [CIPWE](https://cipwe.someshghosh.me)
 
 <div align="center">
 
-**Make your site answerable.**
+**Make your site visible to AI.**
 
 [cipwe.someshghosh.me](https://cipwe.someshghosh.me)
 

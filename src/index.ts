@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 // ============================================================
-// CIPWE - The Web Vitals for the AI Web
+// CIPWE - Can AI Find Your Website?
 // https://cipwe.someshghosh.me
 //
-// Audit & optimize your website for AI agents, LLMs,
-// and answer engines.
+// Check if AI tools can find, understand,
+// and cite your content.
 //
 // Usage:
 //   npx cipwe audit <url>       Audit a website
@@ -21,7 +21,7 @@ const program = new Command();
 
 program
   .name('cipwe')
-  .description('The Web Vitals for the AI Web - Make your website visible in AI answers.')
+  .description('Can AI find your website? Check if ChatGPT, Perplexity & Google AI can cite your content.')
   .version('0.1.0');
 
 program

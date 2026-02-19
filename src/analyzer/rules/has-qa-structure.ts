@@ -55,7 +55,7 @@ export const hasQaStructureRule: Rule = {
         passed: true,
         score: 4,
         maxScore: 4,
-        message: 'Strong Q&A structure detected - great for answer engines',
+        message: 'Strong Q&A structure detected — AI tools can easily extract answers',
       };
     }
 
@@ -80,7 +80,7 @@ export const hasQaStructureRule: Rule = {
       score: 0,
       maxScore: 4,
       message: 'No Q&A structure detected',
-      suggestion: 'Add FAQ-style content with question headings. Answer engines like Perplexity & ChatGPT prioritize pages with clear Q&A patterns',
+      suggestion: 'Add FAQ-style content with question headings. AI tools like Perplexity & ChatGPT prioritize pages with clear Q&A patterns',
     };
   },
 };

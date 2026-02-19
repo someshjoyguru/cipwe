@@ -1,6 +1,6 @@
 # CIPWE - Chrome Extension
 
-> **The Web Vitals for the AI Web** - Audit any website's AI readiness score in one click.
+> **Can AI find your website?** Check if ChatGPT, Perplexity & Google AI can find, understand, and cite your content — one click, instant score, actionable fixes.
 
 ![CIPWE Chrome Extension](icons/icon128.png)
 
@@ -15,7 +15,7 @@
 
 ## Categories
 
-| Category | Max Score | What It Checks |
+| Category | Max Score | What AI Tools Look For |
 |---|---|---|
 | **Structured Data** | 30 | JSON-LD presence, valid types, FAQ/Article schema |
 | **Semantic HTML** | 20 | H1 tag, heading hierarchy, `<main>`, `<article>`/`<section>` |
@@ -36,13 +36,13 @@
 ## How It Works
 
 1. Click the extension icon on any webpage
-2. Hit **"Run Audit"**
+2. Hit **"Audit This Page"**
 3. The extension:
    - Extracts the page's HTML via a content script
    - Fetches `/robots.txt`, `/sitemap.xml`, and `/llms.txt` from the site
-   - Runs all 19 analyzer rules against the page
-   - Calculates your AI-readiness score
-4. View results with category breakdowns and fix suggestions
+   - Runs all 19 checks that AI tools look for
+   - Calculates your visibility score
+4. View results with category breakdowns and actionable fixes
 
 ## Project Structure
 

@@ -8,10 +8,10 @@ export default function DocsIndexPage() {
       <DocsSidebar />
       <section className="docsContent glassCard">
         <p className="eyebrow">Documentation</p>
-        <h1>Everything you need to run CIPWE in production</h1>
+        <h1>Everything you need to make your site visible to AI</h1>
         <p className="lead">
-          Use this documentation to set up auditing, adopt score policies, integrate CI checks, and
-          improve your AI answer visibility systematically.
+          Set up auditing, adopt score policies, integrate CI checks, and ensure ChatGPT,
+          Perplexity & Google AI can find and cite your content.
         </p>
 
         <div className="docsIntroMeta" role="list" aria-label="documentation coverage">
