@@ -856,3 +856,366 @@ h1 span {
     flex-direction: column;
   }
 }
+
+/* ============================================================
+   EXTENSION DOWNLOAD PAGE
+   ============================================================ */
+
+.extensionPage {
+  padding-bottom: 4rem;
+}
+
+/* -- Hero -- */
+.extHero {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.extBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 1rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, rgba(37,99,235,.1), rgba(99,102,241,.1));
+  color: #2563EB;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+}
+
+.extTitle {
+  font-family: var(--font-poppins), Poppins, sans-serif !important;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+.extLead {
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.extDownloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.6rem;
+  padding: 0.85rem 1.6rem;
+  background: #2563EB;
+  color: #fff !important;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 14px rgba(37,99,235,.3);
+  transition: all 0.18s ease;
+}
+
+.extDownloadBtn:hover {
+  background: #1D4ED8;
+  box-shadow: 0 6px 20px rgba(37,99,235,.4);
+  transform: translateY(-2px);
+}
+
+.extDownloadSize {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.extFreeNote {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* -- Extension Preview Mockup -- */
+.extPreview {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.extMockup {
+  width: 340px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(15,23,42,.1), 0 2px 8px rgba(15,23,42,.06);
+  overflow: hidden;
+}
+
+.extMockupBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #1D4ED8, #1E3A8A);
+}
+
+.extMockupBar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.25);
+}
+
+.extMockupTitle {
+  margin-left: 8px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.extMockupBody {
+  padding: 20px;
+}
+
+.extMockupScore {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.extRing {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.extRingText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1D4ED8;
+}
+
+.extGrade {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1D4ED8;
+}
+
+.extScoreSub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.extMockupCats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.extMockupCat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.extCatIcon {
+  width: 22px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.extCatName {
+  flex: 1;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.extCatBar {
+  width: 80px;
+  height: 5px;
+  background: #E5E7EB;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.extCatFill {
+  height: 100%;
+  background: #2563EB;
+  border-radius: 99px;
+}
+
+/* -- Install Steps -- */
+.extSteps {
+  padding: 3rem 0 2rem;
+}
+
+.extSectionTitle {
+  text-align: center;
+  font-family: var(--font-poppins), Poppins, sans-serif !important;
+  font-size: 1.7rem;
+}
+
+.extSectionSub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 50ch;
+  margin: 0.6rem auto 2rem;
+  line-height: 1.6;
+}
+
+.extStepGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.extStepCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.extStepCard:hover {
+  border-color: rgba(37,99,235,.3);
+  box-shadow: 0 4px 16px rgba(37,99,235,.08);
+}
+
+.extStepNum {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563EB, #6366F1);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.extStepCard h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.extStepCard p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.extStepNote {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: rgba(37,99,235,.05);
+  border: 1px solid rgba(37,99,235,.12);
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.extStepNote strong {
+  color: var(--text);
+}
+
+/* -- Features Grid -- */
+.extFeatures {
+  padding: 2rem 0;
+}
+
+.extCatGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.extFeatureCard {
+  text-align: center;
+  padding: 1.4rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.extFeatureCard:hover {
+  border-color: rgba(37,99,235,.3);
+  transform: translateY(-2px);
+}
+
+.extFeatureIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(37,99,235,.08);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2563EB;
+  margin-bottom: 0.7rem;
+}
+
+.extFeatureCard h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.extFeatureCard p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* -- Bottom CTA -- */
+.extCta {
+  text-align: center;
+  padding: 3rem 0 1rem;
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+}
+
+.extCta h3 {
+  font-family: var(--font-poppins), Poppins, sans-serif !important;
+  font-size: 1.5rem;
+}
+
+.extCta p {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+/* -- Responsive -- */
+@media (max-width: 700px) {
+  .extStepGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .extCatGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .extMockup {
+    width: 100%;
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIPWE Audit</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- ===== INITIAL STATE ===== -->
+  <div id="initial-view">
+    <header class="header">
+      <div class="logo-row">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28">
+          <circle cx="16" cy="16" r="15" fill="#1D4ED8" />
+          <text x="16" y="21" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="system-ui, sans-serif">C</text>
+        </svg>
+        <div>
+          <h1 class="logo-text">CIPWE</h1>
+          <p class="logo-sub">AI Readiness Audit</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="url-display" id="current-url"></div>
+
+    <button id="run-audit-btn" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v6m0 0V1m0 6H2m6 0h6M2 8a6 6 0 1012 0A6 6 0 002 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Run Audit
+    </button>
+
+    <div class="info-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#6B7280" stroke-width="1.2"/><path d="M8 7v4M8 5.5v.01" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Analyzes 19 rules across 6 categories
+    </div>
+  </div>
+
+  <!-- ===== LOADING STATE ===== -->
+  <div id="loading-view" class="hidden">
+    <div class="loader-container">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Analyzing page…</p>
+      <p class="loader-sub" id="loading-step">Checking structured data</p>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS STATE ===== -->
+  <div id="results-view" class="hidden">
+    <!-- Score Header -->
+    <div class="score-header" id="score-header">
+      <div class="score-ring-container">
+        <svg class="score-ring" viewBox="0 0 120 120">
+          <circle class="score-ring-bg" cx="60" cy="60" r="52" />
+          <circle class="score-ring-fill" id="score-ring-fill" cx="60" cy="60" r="52" />
+        </svg>
+        <div class="score-value" id="score-value">0</div>
+      </div>
+      <div class="score-meta">
+        <div class="grade-badge" id="grade-badge">A</div>
+        <div class="score-label" id="score-label">0/100</div>
+        <div class="checks-row">
+          <span class="check-passed" id="checks-passed">0 passed</span>
+          <span class="check-divider">·</span>
+          <span class="check-failed" id="checks-failed">0 failed</span>
+        </div>
+        <div class="framework-badge hidden" id="framework-badge"></div>
+      </div>
+    </div>
+
+    <!-- Category Bars -->
+    <div class="section-title">Category Breakdown</div>
+    <div class="categories" id="categories-container"></div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="failed">Issues</button>
+      <button class="tab" data-tab="passed">Passed</button>
+      <button class="tab" data-tab="all">All Rules</button>
+    </div>
+
+    <!-- Rules List -->
+    <div class="rules-list" id="rules-list"></div>
+
+    <!-- Footer -->
+    <div class="results-footer">
+      <button id="rerun-btn" class="btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M1 8a7 7 0 0113.5-2.5M15 8A7 7 0 011.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 1v4.5h-4.5M2 15v-4.5h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Re-run
+      </button>
+      <div class="footer-brand">
+        <span class="footer-text">CIPWE v1.0</span>
+        <a href="https://cipwe.someshghosh.me" target="_blank" class="footer-link">cipwe.someshghosh.me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ERROR STATE ===== -->
+  <div id="error-view" class="hidden">
+    <div class="error-container">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#EF4444" stroke-width="2"/><path d="M14 14l12 12M26 14L14 26" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/></svg>
+      <p class="error-title">Audit Failed</p>
+      <p class="error-msg" id="error-msg">Something went wrong.</p>
+      <button id="retry-btn" class="btn-primary">Try Again</button>
+    </div>
+  </div>
+
+  <script src="../analyzer/analyzer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
