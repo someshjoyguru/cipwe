@@ -1,5 +1,5 @@
 /* ============================================================
-   CIPWE Chrome Extension — Analyzer Engine
+   CIPWE Chrome Extension - Analyzer Engine
    All 19 rules ported to vanilla JS (no cheerio needed)
    ============================================================ */
 
@@ -148,7 +148,7 @@ function checkFaqSchema(doc) {
   blocks.forEach(b => { if (checkForFaq(b)) hasFaq = true; });
 
   if (hasFaq) {
-    return { ruleId: 'faq-schema', ruleName: 'FAQ Schema', category: 'structured-data', passed: true, score: 6, maxScore: 6, message: 'FAQPage schema detected — AI agents can parse Q&A content' };
+    return { ruleId: 'faq-schema', ruleName: 'FAQ Schema', category: 'structured-data', passed: true, score: 6, maxScore: 6, message: 'FAQPage schema detected - AI agents can parse Q&A content' };
   }
 
   const text = (doc.body?.textContent || '').toLowerCase();
@@ -219,7 +219,7 @@ function checkHeadingHierarchy(doc) {
     return { ruleId: 'heading-hierarchy', ruleName: 'Heading Hierarchy', category: 'semantic-html', passed: true, score: 5, maxScore: 5, message: `Clean hierarchy (${headings.length} headings, no skipped levels)` };
   }
 
-  return { ruleId: 'heading-hierarchy', ruleName: 'Heading Hierarchy', category: 'semantic-html', passed: false, score: violations <= 2 ? 3 : 1, maxScore: 5, message: `${violations} hierarchy violation(s) — levels skipped`, suggestion: 'Ensure headings follow H1→H2→H3 order. Don\'t skip levels.' };
+  return { ruleId: 'heading-hierarchy', ruleName: 'Heading Hierarchy', category: 'semantic-html', passed: false, score: violations <= 2 ? 3 : 1, maxScore: 5, message: `${violations} hierarchy violation(s) - levels skipped`, suggestion: 'Ensure headings follow H1→H2→H3 order. Don\'t skip levels.' };
 }
 
 // --- Rule 7: Has <main> (5 pts) ---
@@ -227,7 +227,7 @@ function checkHasMain(doc) {
   const mains = doc.querySelectorAll('main');
 
   if (mains.length === 1) {
-    return { ruleId: 'has-main', ruleName: 'Has <main> Element', category: 'semantic-html', passed: true, score: 5, maxScore: 5, message: '<main> element found — content region is clearly defined' };
+    return { ruleId: 'has-main', ruleName: 'Has <main> Element', category: 'semantic-html', passed: true, score: 5, maxScore: 5, message: '<main> element found - content region is clearly defined' };
   }
   if (mains.length > 1) {
     return { ruleId: 'has-main', ruleName: 'Has <main> Element', category: 'semantic-html', passed: false, score: 3, maxScore: 5, message: `Found ${mains.length} <main> elements (should be 1)`, suggestion: 'Use only one <main> element' };
@@ -459,7 +459,7 @@ function checkQaStructure(doc) {
   if (/\bQ:\s/i.test(text) || /\bA:\s/i.test(text)) qaSignals += 1;
 
   if (qaSignals >= 3) {
-    return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 4, maxScore: 4, message: 'Strong Q&A structure — great for answer engines' };
+    return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 4, maxScore: 4, message: 'Strong Q&A structure - great for answer engines' };
   }
   if (qaSignals >= 1) {
     return { ruleId: 'has-qa-structure', ruleName: 'Q&A Structure', category: 'content-clarity', passed: true, score: 2, maxScore: 4, message: 'Some Q&A signals detected', suggestion: 'Strengthen Q&A structure with question-format headings' };

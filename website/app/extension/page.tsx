@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Download Chrome Extension — CIPWE",
+  title: "Download Chrome Extension - CIPWE",
   description:
     "Download the CIPWE Chrome Extension to audit any website's AI readiness score in one click. Free, no Chrome Web Store needed.",
 };
@@ -15,7 +15,7 @@ const steps = [
   {
     num: "2",
     title: "Unzip the file",
-    desc: "Extract the downloaded zip — you'll get a folder called cipwe-chrome-extension.",
+    desc: "Extract the downloaded zip - you'll get a folder called cipwe-chrome-extension.",
   },
   {
     num: "3",
@@ -60,7 +60,7 @@ export default function ExtensionPage() {
         </h1>
         <p className="lead extLead">
           The same 19-rule CIPWE analysis, right in your browser toolbar.
-          No terminal needed — click, scan, fix.
+          No terminal needed - click, scan, fix.
         </p>
 
         <a
@@ -162,7 +162,7 @@ export default function ExtensionPage() {
       <section className="extFeatures">
         <h2 className="extSectionTitle">What it checks</h2>
         <p className="extSectionSub">
-          19 rules across 6 categories — the same engine as the CLI, scoring up to 100 points.
+          19 rules across 6 categories - the same engine as the CLI, scoring up to 100 points.
         </p>
         <div className="extCatGrid">
           {categories.map((c) => (

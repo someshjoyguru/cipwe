@@ -7,7 +7,7 @@ import { isUrl, normalizeUrl, getBaseUrl } from '../utils/helpers.js';
 export type { FetchOptions } from './fetchUrl.js';
 
 /**
- * Main crawler — orchestrates fetching all data needed for analysis.
+ * Main crawler - orchestrates fetching all data needed for analysis.
  */
 export async function crawl(
   target: string,
@@ -34,7 +34,7 @@ async function crawlUrl(
   // the parallel auxiliary requests fire.
   const html = await fetchUrl(url, opts);
 
-  // Now fetch auxiliary files in parallel — they inherit TLS state
+  // Now fetch auxiliary files in parallel - they inherit TLS state
   const [robotsTxt, sitemapXml, llmsTxt] = await Promise.all([
     tryFetchUrl(`${baseUrl}/robots.txt`, opts),
     tryFetchUrl(`${baseUrl}/sitemap.xml`, opts),

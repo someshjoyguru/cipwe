@@ -55,7 +55,7 @@ export const hasQaStructureRule: Rule = {
         passed: true,
         score: 4,
         maxScore: 4,
-        message: 'Strong Q&A structure detected — great for answer engines',
+        message: 'Strong Q&A structure detected - great for answer engines',
       };
     }
 

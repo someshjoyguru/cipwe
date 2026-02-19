@@ -56,7 +56,7 @@ export default function HomePage() {
           <video autoPlay loop muted playsInline preload="auto" poster="/img/analysis-screenshot-0.png">
             <source src="/cipwe-tutorial.mp4" type="video/mp4" />
           </video>
-          <p className="mediaCaption">Full audit from <code>npx cipwe</code> — score, category breakdown, and actionable fixes in one run</p>
+          <p className="mediaCaption">Full audit from <code>npx cipwe</code> - score, category breakdown, and actionable fixes in one run</p>
         </article>
       </SnapSection>
 

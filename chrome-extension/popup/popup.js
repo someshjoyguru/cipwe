@@ -1,5 +1,5 @@
 /* ============================================================
-   CIPWE Chrome Extension — Popup Controller
+   CIPWE Chrome Extension - Popup Controller
    Orchestrates the audit and renders the beautiful UI.
    ============================================================ */
 
@@ -243,7 +243,7 @@ function renderRulesList(audit, filter) {
     container.innerHTML = `
       <div class="empty-state">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#D1D5DB" stroke-width="1.5"/><path d="M11 16l3 3 7-7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p>${filter === 'failed' ? 'No issues found — great job! 🎉' : 'No rules to show.'}</p>
+        <p>${filter === 'failed' ? 'No issues found - great job! 🎉' : 'No rules to show.'}</p>
       </div>
     `;
     return;

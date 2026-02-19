@@ -26,7 +26,7 @@
 
 **CIPWE** is the **ESLint for AI-readability**. It scans your website and tells you how well AI agents (ChatGPT, Perplexity, Claude, Gemini) can understand, crawl, and answer questions about your content.
 
-Just like **Lighthouse** measures web performance and **Web Vitals** measure user experience — **CIPWE** measures **AI-readiness**.
+Just like **Lighthouse** measures web performance and **Web Vitals** measure user experience - **CIPWE** measures **AI-readiness**.
 
 ```bash
 npx cipwe audit https://your-site.com
@@ -138,12 +138,12 @@ cipwe fix . -o ./public
 ```
 
 Generates:
-- `llms.txt` — AI agent directive file
-- `structured-data.jsonld` — JSON-LD schema
-- `structured-data-snippet.html` — Copy-paste HTML snippet
-- `robots.txt` — AI-bot-friendly robots file
-- `sitemap.xml` — Auto-generated sitemap
-- `cipwe-report.md` — Detailed audit report
+- `llms.txt` - AI agent directive file
+- `structured-data.jsonld` - JSON-LD schema
+- `structured-data-snippet.html` - Copy-paste HTML snippet
+- `robots.txt` - AI-bot-friendly robots file
+- `sitemap.xml` - Auto-generated sitemap
+- `cipwe-report.md` - Detailed audit report
 
 ### `cipwe score <target>`
 
@@ -264,11 +264,11 @@ CIPWE auto-generates this for you with the `fix` command.
 > SEO optimized for Google.  
 > CIPWE optimizes for the AI web.
 
-The web is becoming **answer-first**. Users don't click links — they ask AI agents. Your content needs to be:
+The web is becoming **answer-first**. Users don't click links - they ask AI agents. Your content needs to be:
 
-1. **Findable** — AI agents can discover it
-2. **Parseable** — Structured for machine reading
-3. **Answerable** — Clear enough to generate accurate answers
+1. **Findable** - AI agents can discover it
+2. **Parseable** - Structured for machine reading
+3. **Answerable** - Clear enough to generate accurate answers
 
 CIPWE measures all three.
 

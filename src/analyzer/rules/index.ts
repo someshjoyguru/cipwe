@@ -32,7 +32,7 @@ import { hasLlmsTxtRule } from './has-llms-txt.js';
 import { hasStructuredSummaryRule } from './has-structured-summary.js';
 
 /**
- * All CIPWE rules — ordered by category.
+ * All CIPWE rules - ordered by category.
  * Total max score: 100 points
  */
 export const allRules: Rule[] = [

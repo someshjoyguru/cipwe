@@ -1,6 +1,6 @@
-# CIPWE — Chrome Extension
+# CIPWE - Chrome Extension
 
-> **The Web Vitals for the AI Web** — Audit any website's AI readiness score in one click.
+> **The Web Vitals for the AI Web** - Audit any website's AI readiness score in one click.
 
 ![CIPWE Chrome Extension](icons/icon128.png)
 
@@ -90,4 +90,4 @@ npx cipwe audit example.com
 
 ## License
 
-MIT — Made by [Somesh Ghosh](https://github.com/someshjoyguru)
+MIT - Made by [Somesh Ghosh](https://github.com/someshjoyguru)

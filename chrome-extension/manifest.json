@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "CIPWE — AI Readiness Audit",
+  "name": "CIPWE - AI Readiness Audit",
   "version": "1.0.0",
-  "description": "The Web Vitals for the AI Web — Audit any website's AI readiness score in one click.",
+  "description": "The Web Vitals for the AI Web - Audit any website's AI readiness score in one click.",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "action": {

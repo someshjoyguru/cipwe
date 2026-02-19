@@ -1,5 +1,5 @@
 /* ============================================================
-   CIPWE Chrome Extension — Background Service Worker
+   CIPWE Chrome Extension - Background Service Worker
    Handles fetching robots.txt, sitemap.xml, llms.txt
    ============================================================ */
 
@@ -32,7 +32,7 @@ async function fetchText(url) {
     });
     if (!resp.ok) return null;
     const text = await resp.text();
-    // Sanity check — if the response is HTML, it's probably a 404 page
+    // Sanity check - if the response is HTML, it's probably a 404 page
     if (text.trim().startsWith('<!DOCTYPE') || text.trim().startsWith('<html')) {
       return null;
     }

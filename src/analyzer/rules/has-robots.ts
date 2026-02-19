@@ -70,7 +70,7 @@ export const hasRobotsRule: Rule = {
         score: 1,
         maxScore: 5,
         message: 'robots.txt exists but may be blocking crawlers',
-        suggestion: 'Review your robots.txt — consider allowing GPTBot, Anthropic-AI, and PerplexityBot',
+        suggestion: 'Review your robots.txt - consider allowing GPTBot, Anthropic-AI, and PerplexityBot',
       };
     }
 

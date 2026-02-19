@@ -14,7 +14,7 @@ interface AuditOptions {
 }
 
 /**
- * The `cipwe audit` command — scan and score a website.
+ * The `cipwe audit` command - scan and score a website.
  */
 export async function auditCommand(target: string, options: AuditOptions): Promise<void> {
   const isJsonMode = options.json || false;

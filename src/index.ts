@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // ============================================================
-// CIPWE — The Web Vitals for the AI Web
+// CIPWE - The Web Vitals for the AI Web
 // https://cipwe.someshghosh.me
 //
 // Audit & optimize your website for AI agents, LLMs,
@@ -21,7 +21,7 @@ const program = new Command();
 
 program
   .name('cipwe')
-  .description('The Web Vitals for the AI Web — Make your website visible in AI answers.')
+  .description('The Web Vitals for the AI Web - Make your website visible in AI answers.')
   .version('0.1.0');
 
 program

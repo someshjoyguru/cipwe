@@ -19,7 +19,7 @@ export const hasMainRule: Rule = {
         passed: true,
         score: 5,
         maxScore: 5,
-        message: '<main> element found — content region is clearly defined',
+        message: '<main> element found - content region is clearly defined',
       };
     }
 

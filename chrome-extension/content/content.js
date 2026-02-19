@@ -1,5 +1,5 @@
 /* ============================================================
-   CIPWE Chrome Extension — Content Script
+   CIPWE Chrome Extension - Content Script
    Runs in the page context to extract DOM data for analysis.
    Works on SSR, SSG, and client-rendered SPAs (React, Vue, etc.)
    ============================================================ */
@@ -30,7 +30,7 @@
         onReady();
       } else {
         window.addEventListener('load', onReady, { once: true });
-        // Safety timeout — don't wait forever
+        // Safety timeout - don't wait forever
         setTimeout(resolve, 3000);
       }
     });
