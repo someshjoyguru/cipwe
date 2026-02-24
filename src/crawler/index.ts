@@ -21,6 +21,34 @@ export async function crawl(
 }
 
 /**
+ * Parse Sitemap: directives from robots.txt content.
+ * Falls back to {baseUrl}/sitemap.xml if no directives found.
+ */
+function parseSitemapUrls(robotsTxt: string | null, baseUrl: string): string[] {
+  if (!robotsTxt) {
+    return [`${baseUrl}/sitemap.xml`];
+  }
+
+  const urls: string[] = [];
+  const lines = robotsTxt.split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (/^sitemap\s*:/i.test(trimmed)) {
+      const url = trimmed.replace(/^sitemap\s*:\s*/i, '').trim();
+      if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
+        urls.push(url);
+      }
+    }
+  }
+
+  if (urls.length === 0) {
+    urls.push(`${baseUrl}/sitemap.xml`);
+  }
+
+  return urls;
+}
+
+/**
  * Crawl a deployed URL.
  */
 async function crawlUrl(
@@ -34,12 +62,22 @@ async function crawlUrl(
   // the parallel auxiliary requests fire.
   const html = await fetchUrl(url, opts);
 
-  // Now fetch auxiliary files in parallel - they inherit TLS state
-  const [robotsTxt, sitemapXml, llmsTxt] = await Promise.all([
-    tryFetchUrl(`${baseUrl}/robots.txt`, opts),
-    tryFetchUrl(`${baseUrl}/sitemap.xml`, opts),
+  // Fetch robots.txt first to discover sitemap URLs
+  const robotsTxt = await tryFetchUrl(`${baseUrl}/robots.txt`, opts);
+
+  // Parse Sitemap: directives from robots.txt
+  const sitemapUrls = parseSitemapUrls(robotsTxt, baseUrl);
+
+  // Fetch all discovered sitemaps and llms.txt in parallel
+  const sitemapPromises = sitemapUrls.map(u => tryFetchUrl(u, opts));
+  const [llmsTxt, ...sitemapResults] = await Promise.all([
     tryFetchUrl(`${baseUrl}/llms.txt`, opts),
+    ...sitemapPromises,
   ]);
+
+  // Combine all successful sitemap contents
+  const validSitemaps = sitemapResults.filter((s): s is string => s !== null);
+  const sitemapXml = validSitemaps.length > 0 ? validSitemaps.join('\n') : null;
 
   return {
     url,

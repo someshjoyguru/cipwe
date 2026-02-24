@@ -84,21 +84,15 @@ async function runAudit(tab) {
   startLoadingAnimation();
 
   try {
-    // 1. Inject content script & get page data
-    let pageData;
-    try {
-      const response = await chrome.tabs.sendMessage(tab.id, { action: 'gatherPageData' });
-      pageData = response;
-    } catch {
-      // Content script might not be loaded yet, inject it
-      await chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        files: ['content/content.js'],
-      });
-      // Small delay then retry
-      await new Promise(r => setTimeout(r, 200));
-      pageData = await chrome.tabs.sendMessage(tab.id, { action: 'gatherPageData' });
-    }
+    // 1. Inject content script (always inject since we don't use content_scripts in manifest)
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ['content/content.js'],
+    });
+    // Small delay for script to initialize
+    await new Promise(r => setTimeout(r, 300));
+
+    const pageData = await chrome.tabs.sendMessage(tab.id, { action: 'gatherPageData' });
 
     if (!pageData || !pageData.html) {
       throw new Error('Could not read page content. Make sure you\'re on a web page.');
