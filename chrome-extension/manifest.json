@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "CIPWE - Can AI Find Your Website?",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ChatGPT, Perplexity & Google AI pull answers from websites. Check if yours shows up - one click, instant score, actionable fixes.",
   "permissions": [
     "activeTab",

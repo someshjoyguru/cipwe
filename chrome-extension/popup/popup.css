@@ -5,7 +5,7 @@
 
 :root {
   /* Blue Palette */
-  --blue-50:  #EFF6FF;
+  --blue-50: #EFF6FF;
   --blue-100: #DBEAFE;
   --blue-200: #BFDBFE;
   --blue-300: #93C5FD;
@@ -18,7 +18,7 @@
   --blue-950: #172554;
 
   /* Neutrals */
-  --gray-50:  #F9FAFB;
+  --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
   --gray-200: #E5E7EB;
   --gray-300: #D1D5DB;
@@ -32,17 +32,17 @@
   /* Semantic */
   --success: #10B981;
   --success-bg: #ECFDF5;
-  --danger:  #EF4444;
+  --danger: #EF4444;
   --danger-bg: #FEF2F2;
-  --warn:    #F59E0B;
+  --warn: #F59E0B;
   --warn-bg: #FFFBEB;
 
   /* Layout */
   --radius: 10px;
   --radius-sm: 6px;
   --radius-full: 9999px;
-  --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
-  --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05);
+  --shadow: 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .06);
 }
 
 * {
@@ -66,9 +66,11 @@ body {
 body::-webkit-scrollbar {
   width: 5px;
 }
+
 body::-webkit-scrollbar-track {
   background: transparent;
 }
+
 body::-webkit-scrollbar-thumb {
   background: var(--gray-300);
   border-radius: 10px;
@@ -204,7 +206,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loader-text {
@@ -246,7 +250,7 @@ body::-webkit-scrollbar-thumb {
 
 .score-ring-bg {
   fill: none;
-  stroke: rgba(255,255,255,0.15);
+  stroke: rgba(255, 255, 255, 0.15);
   stroke-width: 8;
 }
 
@@ -283,7 +287,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   width: fit-content;
   padding: 2px 12px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
   font-size: 14px;
   font-weight: 700;
@@ -305,9 +309,19 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
 }
 
-.check-passed { color: #6EE7B7; font-weight: 500; }
-.check-failed { color: #FCA5A5; font-weight: 500; }
-.check-divider { opacity: 0.5; }
+.check-passed {
+  color: #6EE7B7;
+  font-weight: 500;
+}
+
+.check-failed {
+  color: #FCA5A5;
+  font-weight: 500;
+}
+
+.check-divider {
+  opacity: 0.5;
+}
 
 .framework-badge {
   display: inline-flex;
@@ -315,11 +329,11 @@ body::-webkit-scrollbar-thumb {
   gap: 4px;
   margin-top: 4px;
   padding: 2px 10px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-full);
   font-size: 10px;
   font-weight: 600;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.3px;
   backdrop-filter: blur(4px);
 }
@@ -381,10 +395,21 @@ body::-webkit-scrollbar-thumb {
   background: var(--blue-500);
 }
 
-.cat-bar-fill.good { background: var(--blue-500); }
-.cat-bar-fill.ok   { background: var(--blue-400); }
-.cat-bar-fill.warn { background: var(--warn); }
-.cat-bar-fill.bad  { background: var(--danger); }
+.cat-bar-fill.good {
+  background: var(--blue-500);
+}
+
+.cat-bar-fill.ok {
+  background: var(--blue-400);
+}
+
+.cat-bar-fill.warn {
+  background: var(--warn);
+}
+
+.cat-bar-fill.bad {
+  background: var(--danger);
+}
 
 .cat-score {
   font-size: 11px;
@@ -666,8 +691,15 @@ body::-webkit-scrollbar-thumb {
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .rule-card {
@@ -678,9 +710,26 @@ body::-webkit-scrollbar-thumb {
   animation: fadeIn 0.2s ease both;
 }
 
-.cat-row:nth-child(1) { animation-delay: 0.05s; }
-.cat-row:nth-child(2) { animation-delay: 0.1s; }
-.cat-row:nth-child(3) { animation-delay: 0.15s; }
-.cat-row:nth-child(4) { animation-delay: 0.2s; }
-.cat-row:nth-child(5) { animation-delay: 0.25s; }
-.cat-row:nth-child(6) { animation-delay: 0.3s; }
+.cat-row:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.cat-row:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.cat-row:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.cat-row:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.cat-row:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.cat-row:nth-child(6) {
+  animation-delay: 0.3s;
+}
